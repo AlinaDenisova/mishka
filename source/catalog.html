@@ -73,5 +73,25 @@
       </div>
     </footer>
 
+    <div class="overlay"></div>
+    <section class="modal-basket">
+      <h2 class="modal-basket__title">Добавить в корзину</h2>
+      <form class="modal-basket__form size-form">
+        <fieldset>
+          <legend class="size-form__title">Выберите размер:</legend>
+          <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
+          <label class="size-form__label" for="s">S</label>
+          <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
+          <label class="size-form__label" for="m">M</label>
+          <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
+          <label class="size-form__label" for="l">L</label>
+        </fieldset>
+        <button class="btn--green size-form__btn" type="submit">Добавить</button>
+      </form>
+      <button class="visually-hidden modal-basket__close-btn" type="button">
+      <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
   </body>
 </html>
