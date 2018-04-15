@@ -16,7 +16,9 @@
         </div>
 
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="catalog.html">Каталог товаров</a>
@@ -47,9 +49,7 @@
       <div class="page-main__container">
         <section class="order-form">
           <h2 class="visually-hidden">Форма заказа товаров</h2>
-          <div class="order-form__descr-wrapper">
-            <p class="order-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-          </div>
+          <p class="order-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
 
           <form method="post" action="https://echo.htmlacademy.ru">
             <fieldset class="order-form__group order-form__group--type">
@@ -76,7 +76,7 @@
               <label class="order-form__label" for="orange">Оранжевый</label>
             </fieldset>
 
-            <fieldset class="order-form__group order-form__group--user">
+            <fieldset class="order-form__group order-form__group--name">
               <legend class="order-form__title">ФИО</legend>
               <label class="order-form__label" for="name">Имя:</label>
               <input class="order-form__input-field" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>

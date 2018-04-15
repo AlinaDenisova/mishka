@@ -16,7 +16,9 @@
         </div>
 
         <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="catalog.html">Каталог товаров</a>
@@ -44,10 +46,10 @@
         <h1 class="promo__title page-title">Милые штуки ручной работы для дома</h1>
         <div class="promo__container">
           <ul class="promo__list">
-            <li class="promo__item--interior">
+            <li class="promo__item promo__item--interior">
               <a href="#">Предметы интерьера</a>
             </li>
-            <li class="promo__item--toys">
+            <li class="promo__item promo__item--toys">
               <a href="#">Детские игрушки</a>
             </li>
           </ul>
@@ -61,19 +63,17 @@
               <h2 class="good-hit__title">Вязанные корзинки</h2>
               <p class="goot-hit__label">Товар недели</p>
             </div>
-            <div class="good-hit__descr-wrapper">
-              <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            </div>
-            <table class="good-hit__properties">
-              <tr class="good-hit__properties-item">
+            <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="good-hit__table properties-table">
+              <tr class="properties-table__item">
                 <td>Цвет</td>
                 <td>«Тиффани»/серый</td>
               </tr>
-              <tr class="good-hit__properties-item">
+              <tr class="properties-table__item">
                 <td>Диаметр</td>
                 <td>25 см</td>
               </tr>
-              <tr class="good-hit__properties-item">
+              <tr class="properties-table__item">
                 <td>Высота</td>
                 <td>15 см</td>
               </tr>
@@ -91,28 +91,44 @@
         <section class="features">
           <h2 class=features__title>Коротко о нас</h2>
           <ul class="features__list">
-            <li class="features__item">Экологически чистые материалы</li>
-            <li class="features__item">Скандинавский стиль по российской цене</li>
-            <li class="features__item">Увеличивает лайки на фотографиях</li>
-            <li class="features__item">Связано вручную с любовью и умилением</li>
-            <li class="features__item">Поддержка отечественного производителя</li>
-            <li class="features__item">Поставляется в подарочной упаковке</li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - цветок">
+              <p class="features__text">Экологически чистые материалы</p>
+            </li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - банкнота">
+              <p class="features__text">Скандинавский стиль по российской цене</p>
+            </li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - лайк">
+              <p class="features__text">Увеличивает лайки на фотографиях</p>
+            </li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - клубок">
+              <p class="features__text">Связано вручную с любовью и умилением</p>
+            </li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - ракета">
+              <p class="features__text">Поддержка отечественного производителя</p>
+            </li>
+            <li class="features__item">
+              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - подарок">
+              <p class="features__text">Поставляется в подарочной упаковке</p>
+            </li>
           </ul>
         </section>
 
         <section class="reviews slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
-              <blockquote class="reviews__content">
-                <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-                <cite class="reviews__author-name">Анастасия Красильникова
-                  <span class="reviews__author-link">@misssssiskras</span>
-                </cite>
-              </blockquote>
+          <ul class="slider__list">
+            <li class="slider__item reviews__item review">
+              <blockquote class="review__content">>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>>
+              <cite class="review__author-name">Анастасия Красильникова
+                <a class="review__author-link" href="mailto:@misssssiskras">@misssssiskras</a>
+              </cite>
             </li>
           </ul>
-          <div class="reviews__controls slider__controls">
+          <div class="slider__controls">
             <button class="slider__control slider__control--back" type="button">
               <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
@@ -127,9 +143,7 @@
       <section class="contacts">
         <div class="contacts__container">
           <div class="contacts__text">
-            <div class="contacts__title">
-              <h2>Контакты</h2>
-            </div>
+            <h2 class="contacts__title">Контакты</h2>
             <div class="contacts__info-wrapper">
               <span class="contacts__info">e-mail:</span>
               <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
@@ -142,9 +156,7 @@
         </div>
         <div class="contacts__map"></div>
         <div class="contacts__container">
-          <div class="contacts__btn-wrapper">
-            <a class="btn contacts__btn" href="#">Напишите нам</a>
-          </div>
+          <a class="btn contacts__btn" href="#">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -185,9 +197,9 @@
     </footer>
 
     <div class="overlay"></div>
-    <section class="modal-basket">
-      <h2 class="modal-basket__title">Добавить в корзину</h2>
-      <form class="modal-basket__form size-form">
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form size-form">
         <fieldset>
           <legend class="size-form__title">Выберите размер:</legend>
           <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
@@ -196,11 +208,11 @@
           <label class="size-form__label" for="m">M</label>
           <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
           <label class="size-form__label" for="l">L</label>
-          <button class="btn--green size-form__btn" type="submit">Добавить</button>
+          <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
         </fieldset>
       </form>
-      <button class="visually-hidden modal-basket__close-btn" type="button">
-      <span class="visually-hidden">Закрыть</span>
+      <button class="visually-hidden modal__close-btn" type="button">
+        <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
 
