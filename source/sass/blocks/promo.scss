@@ -23,9 +23,9 @@
 }
 
 .promo__list {
-  margin-bottom: auto;
   margin: 0;
   padding: 0;
+  margin-bottom: auto;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,6 @@
 }
 
 .promo__item-link {
-  display: block;
   padding: 0;
   font-size: 19px;
   line-height: 24px;

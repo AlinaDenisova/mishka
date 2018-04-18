@@ -67,9 +67,9 @@
   }
 
   &::-webkit-input-placeholder,
-  ::-moz-placeholder,
-  :-moz-placeholder,
-  :-ms-input-placeholder {
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &:-ms-input-placeholder {
     color: rgba($black, 0.3%);
   }
 
@@ -82,7 +82,7 @@
     &:hover,
     &:focus,
     &:active {
-    border: 2px solid $downy;
+      border: 2px solid $downy;
     }
   }
 }
