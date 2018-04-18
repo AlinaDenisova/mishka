@@ -1,0 +1,54 @@
+.catalog-card {
+  background-color: $white;
+  border: 1px solid $whisper;
+  margin-top: 30px;
+}
+
+.catalog-card__img img {
+  display: block;
+}
+
+.catalog-card__text {
+  padding: 0 28px;
+}
+
+.catalog-card__title {
+  @include font-text;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.catalog-card__link {
+  display: block;
+  color: $black;
+
+  &:hover {
+    color: rgba($black, 0.6%);
+  }
+
+  &:active {
+    color: rgba($black, 0.3%);
+  }
+}
+
+.catalog-card__descr {
+  display: block;
+  margin: 0;
+  font-size: 13px;
+  line-height: 30px;
+  color: $charcoal;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $whisper;
+}
+
+.catalog-card__price {
+  @include font-text;
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+

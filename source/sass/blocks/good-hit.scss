@@ -1,0 +1,51 @@
+.good-hit {
+  background-color: $white;
+  margin-bottom: 35px;
+}
+
+.good-hit__title {
+  @include section-title;
+  padding: 0;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.good-hit__label {
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $downy;
+  text-transform: uppercase;
+  margin-top: 5px
+}
+
+.good-hit__descr {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $charcoal;
+  margin-top: 28px;
+}
+
+.good-hit__table {
+  margin-top: 32px;
+}
+
+.good-hit__img img {
+  margin-top: 28px;
+  width: 100%;
+}
+
+.good-hit__price {
+  @include font-text;
+  display: block;
+  margin-top: 28px;
+}
+
+.good-hit__btn {
+  margin-top: 28px;
+}

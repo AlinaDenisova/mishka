@@ -1,0 +1,17 @@
+.reviews {
+  background-color: $white;
+  min-width: 260px;
+  margin-bottom: 45px;
+}
+
+.reviews__title {
+  @include section-title;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.reviews__btn {
+  margin-top: 35px;
+}
+

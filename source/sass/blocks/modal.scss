@@ -1,0 +1,10 @@
+.modal {
+  @include inner-container;
+  background-color: $white;
+}
+
+.modal__title {
+  @include section-title;
+  padding: 0;
+  margin-top: 35px;
+}

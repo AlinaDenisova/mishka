@@ -1,0 +1,13 @@
+.inner-promo {
+  background-color: $white-smoke;
+  min-height: 177px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-promo__title {
+  @include page-title;
+  margin: 0;
+  padding: 0;
+}

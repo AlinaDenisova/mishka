@@ -1,0 +1,32 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-list__item {
+  padding-left: 46px;
+  border-bottom: 1px solid $whisper;
+}
+
+.site-list__link {
+  @include font-text;
+  @include inner-container;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 80px;
+  text-decoration: none;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6%);
+  }
+
+  &:active {
+    color: rgba($black, 0.3%);
+  }
+}
+
+

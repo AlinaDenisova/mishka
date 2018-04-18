@@ -1,0 +1,21 @@
+.social {
+  border-bottom: 1px solid $whisper;
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.social__item {
+  margin-right: 40px;
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,12 @@
+.properties-table {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $charcoal;
+  border-collapse: collapse;
+}
+
+.properties-table__item {
+  border-bottom: 1px solid $whisper;
+  background-color: $white;
+}
