@@ -1,7 +1,10 @@
 .reviews {
-  background-color: $white;
   min-width: 260px;
   margin-bottom: 45px;
+}
+
+.reviews__container {
+  @include container-mobile;
 }
 
 .reviews__title {

@@ -2,6 +2,15 @@
   background-color: $white;
   border: 1px solid $whisper;
   margin-top: 30px;
+
+  &:hover .catalog-card__text,
+  &:focus .catalog-card__text {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .catalog-card__text {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-card__img img {
@@ -15,14 +24,15 @@
 .catalog-card__title {
   @include font-text;
   margin: 0;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .catalog-card__link {
   display: block;
   color: $black;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgba($black, 0.6%);
   }
 

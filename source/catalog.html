@@ -3,38 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <div class="page-header__container">
-
         <div class="page-header__logo logo">
           <a class="logo__link" href="index.html">
             <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link">Каталог товаров</a>
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Каталог товаров</span>
+              </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">
+                <span class="site-list__text">Вязание на заказ</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Распродажа</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__link" href="#">Поиск по сайту</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Поиск по сайту</span>
+              </a>
             </li>
             <li class="user-list__item">
-              <a class="user-list__link" href="#">Корзина: пока пуста</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -46,8 +64,8 @@
         <h1 class="inner-promo__title">Каталог товаров</h1>
       </div>
 
-      <div class="page-main__container">
-        <section class="catalog">
+      <section class="catalog">
+        <div class="catalog__container">
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog__list">
             <li class="catalog__item catalog-card">
@@ -102,18 +120,22 @@
               </div>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="production-process">
-          <h2 class="production-process__title">Процесс производства</h2>
-          <div class="production-process__video">
-            <img src="../img/video-mobile@1x.jpg" alt="Процесс производства">
-            <button class="production-process__video-button" type="button">
+      <section class="production-process">
+        <div class="production-process__container">
+          <div class="production-process__content">
+            <h2 class="production-process__title">Процесс производства</h2>
+            <div class="production-process__video">
+              <img src="../img/video-mobile@1x.jpg" alt="Процесс производства">
+              <button class="production-process__video-button" type="button"></button>
+            </div>
+            <p class="production-process__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a href="#" class="btn production-process__btn">Сделать заказ</a>
           </div>
-          <p class="production-process__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a href="#" class="btn production-process__btn">Сделать заказ</a>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -152,23 +174,25 @@
     </footer>
 
     <div class="overlay"></div>
-    <section class="modal-basket">
-      <h2 class="modal-basket__title">Добавить в корзину</h2>
-      <form class="modal-basket__form size-form">
-        <fieldset class="size-form__group">
-          <legend class="size-form__title">Выберите размер:</legend>
-          <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
-          <label class="size-form__label" for="s">S</label>
-          <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
-          <label class="size-form__label" for="m">M</label>
-          <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
-          <label class="size-form__label" for="l">L</label>
-        </fieldset>
-        <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
-      </form>
-      <button class="visually-hidden modal-basket__close-btn" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+    <section class="modal">
+      <div class="modal__container">
+        <h2 class="modal-basket__title">Добавить в корзину</h2>
+        <form class="modal-basket__form size-form">
+          <fieldset class="size-form__group">
+            <legend class="size-form__title">Выберите размер:</legend>
+            <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
+            <label class="size-form__label" for="s">S</label>
+            <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
+            <label class="size-form__label" for="m">M</label>
+            <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
+            <label class="size-form__label" for="l">L</label>
+          </fieldset>
+          <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
+        </form>
+        <button class="visually-hidden modal-basket__close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
 
   </body>

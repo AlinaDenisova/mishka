@@ -1,7 +1,13 @@
 .production-process {
-  background-color: $white;
-  border: 1px solid $whisper;
   margin-bottom: 60px;
+}
+
+.production-process__container {
+  @include container-mobile;
+}
+
+.production-process__content {
+  border: 1px solid $whisper;
 }
 
 .production-process__title {

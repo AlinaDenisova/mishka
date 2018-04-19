@@ -1,6 +1,9 @@
 .order-form {
-  background-color: $white;
   margin-bottom: 55px;
+}
+
+.order-form__container {
+  @include container-mobile;
 }
 
 .order-form__descr {
@@ -8,16 +11,14 @@
   padding: 0;
   margin: 0;
   font-size: 13px;
-  line-hright: 24px;
+  line-height: 24px;
   color: $charcoal;
   margin-top: 30px;
 }
 
 .order-form__group {
   display: flex;
-  padding: 0;
-  margin: 0;
-  border: none;
+  flex-direction: column;
 }
 
 .order-form__title {
@@ -35,7 +36,6 @@
     content: "";
     flex-grow: 1;
     flex-shrink: 0;
-    width: 198px;
     height: 1px;
     background-color: $downy;
     margin-left: 20px;
@@ -45,10 +45,64 @@
 .order-form__label {
   @include font-text;
   line-height: 18px;
-  margin-top: 22px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 40px;
+  min-height: 39px;
 
   &--left {
-    margin-left: 62px;
+    padding-left: 62px;
+  }
+}
+
+.order-form__input {
+  & + .order-form__label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid $charcoal;
+  }
+
+  &:hover + .order-form__label::before,
+  &:focus + .order-form__label::before {
+    border: 2px solid $downy;
+  }
+
+  &:active + .order-form__label::before {
+    border: 2px solid rgba($charcoal, 0.3%);
+  }
+
+  &--radio + .order-form__label::before {
+    border-radius: 50%;
+  }
+
+  &:checked + .order-form__label::after {
+    content: "";
+    position: absolute;
+  }
+
+  &--radio:checked + .order-form__label::after {
+    left: 11px;
+    top: 11px;
+    width: 16px;
+    height: 16px;
+    background-color: $downy;
+    border-radius: 50%;
+  }
+
+  &--checkbox:checked + .order-form__label::after {
+    left: 15px;
+    top: 5px;
+    width: 8px;
+    height: 19px;
+    background-color: transparent;
+    border: 2px solid $charcoal;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
   }
 }
 

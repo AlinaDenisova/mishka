@@ -1,14 +1,14 @@
 .promo {
-  @include container;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: auto 350px;
+  background-size: 100% 350px;
   background-color: $white-smoke;
   min-height: 490px;
+  width: 100%;
 }
 
 .promo__title {
@@ -33,7 +33,6 @@
 }
 
 .promo__item {
-  @include inner-container;
   width: 100%;
   box-sizing: border-box;
 
@@ -47,7 +46,7 @@
 }
 
 .promo__item-link {
-  padding: 0;
+  @include container-mobile;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;

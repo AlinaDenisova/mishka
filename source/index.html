@@ -3,38 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="../css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <div class="page-header__container">
-
         <div class="page-header__logo logo">
           <a class="logo__link">
             <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">
+                <span class="site-list__text">Каталог товаров</span>
+              </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__link" href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">
+                <span class="site-list__text">Вязание на заказ</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Распродажа</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__link" href="#">Поиск по сайту</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Поиск по сайту</span>
+              </a>
             </li>
             <li class="user-list__item">
-              <a class="user-list__link" href="#">Корзина: пока пуста</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -44,24 +62,24 @@
     <main class="page-main">
 
       <section class="promo">
-        <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="promo__title">Милые штуки ручной<br> работы для дома</h1>
         <div class="promo__container">
           <ul class="promo__list">
             <li class="promo__item promo__item--interior">
-              <a class="promo__item-link" href="#">Предметы интерьера</a>
+              <a class="promo__item-link" href="#">Предметы<br> интерьера</a>
             </li>
             <li class="promo__item promo__item--toys">
-              <a class="promo__item-link" href="#">Детские игрушки</a>
+              <a class="promo__item-link" href="#">Детские<br> игрушки</a>
             </li>
           </ul>
         </div>
       </section>
 
-      <div class="page-main__container">
-        <section class="good-hit">
+      <section class="good-hit">
+        <div class="good-hit__container">
           <div class="good-hit__text">
             <div class=good-hit__title-wrapper>
-              <h2 class="good-hit__title">Вязанные корзинки</h2>
+              <h2 class="good-hit__title">Вязаные корзинки</h2>
               <p class="good-hit__label">Товар недели</p>
             </div>
             <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
@@ -81,15 +99,17 @@
             </table>
           </div>
           <div class="good-hit__img">
-            <img src="../img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
+            <img src="../img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
           </div>
           <div class="good-hit__buy">
             <span class="good-hit__price">Цена: 990 руб.</span>
             <a href="" class="btn good-hit__btn">Заказать</a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="features">
+      <section class="features">
+        <div class="features__container">
           <h2 class=features__title>Коротко о нас</h2>
           <ul class="features__list">
             <li class="features__item">
@@ -117,9 +137,11 @@
               <p class="features__text">Поставляется в подарочной упаковке</p>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="reviews slider">
+      <section class="reviews slider">
+        <div class="reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
           <ul class="slider__list">
             <li class="slide review">
@@ -138,8 +160,8 @@
             </button>
           </div>
           <a class="btn reviews__btn" href="#">Написать</a>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <section class="contacts">
         <div class="contacts__container">
@@ -199,22 +221,24 @@
 
     <div class="overlay"></div>
     <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal__form size-form">
-        <fieldset class="size-form__group">
-          <legend class="size-form__title">Выберите размер:</legend>
-          <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
-          <label class="size-form__label" for="s">S</label>
-          <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
-          <label class="size-form__label" for="m">M</label>
-          <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
-          <label class="size-form__label" for="l">L</label>
-          <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
-        </fieldset>
-      </form>
-      <button class="visually-hidden modal__close-btn" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <div class="modal__container">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__form size-form">
+          <fieldset class="size-form__group">
+            <legend class="size-form__title">Выберите размер:</legend>
+            <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
+            <label class="size-form__label" for="s">S</label>
+            <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
+            <label class="size-form__label" for="m">M</label>
+            <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
+            <label class="size-form__label" for="l">L</label>
+            <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
+          </fieldset>
+        </form>
+        <button class="visually-hidden modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
 
   </body>

@@ -1,6 +1,9 @@
 .modal {
-  @include inner-container;
   background-color: $white;
+}
+
+.modal__container {
+  @include container-mobile;
 }
 
 .modal__title {

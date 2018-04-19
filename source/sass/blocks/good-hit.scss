@@ -3,6 +3,10 @@
   margin-bottom: 35px;
 }
 
+.good-hit__container {
+  @include container-mobile;
+}
+
 .good-hit__title {
   @include section-title;
   padding: 0;

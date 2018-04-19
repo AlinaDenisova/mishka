@@ -3,6 +3,10 @@
   margin-bottom: 30px;
 }
 
+.features__container {
+  @include container-mobile;
+}
+
 .features__title {
   @include section-title;
   margin: 0;

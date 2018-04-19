@@ -1,3 +1,13 @@
-.page-header {
-  background-color: $white;
+.page-header__logo {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $whisper;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo {
+    min-height: 88px;
+  }
 }

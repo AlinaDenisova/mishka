@@ -7,7 +7,7 @@
 }
 
 .contacts__container {
-  @include inner-container;
+  @include container-mobile;
 }
 
 .contacts__title {
@@ -39,7 +39,7 @@
   background-image: url("../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: #eee5d8;
-  background-size: cover;
+  background-size: 100% 457px;
   margin-top: 40px;
   min-height: 457px;
 }
