@@ -1,0 +1,36 @@
+.production-process {
+  margin-bottom: 60px;
+}
+
+.production-process__container {
+  @include container-mobile;
+}
+
+.production-process__content {
+  border: 1px solid $whisper;
+}
+
+.production-process__title {
+  @include font-text;
+  margin: 0;
+  margin-top: 28px;
+  padding: 0 28px;
+}
+
+.production-process__video img {
+  margin-top: 28px;
+}
+
+.production-process__descr {
+  display: block;
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: $charcoal;
+  margin-top: 35px;
+  padding: 0 34px;
+}
+
+.production-process__btn {
+  margin: 28px 34px 33px 34px;
+}

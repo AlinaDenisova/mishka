@@ -1,0 +1,31 @@
+.features {
+  background-color: $white;
+  margin-bottom: 30px;
+}
+
+.features__container {
+  @include container-mobile;
+}
+
+.features__title {
+  @include section-title;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  margin-top: 30px;
+}
+
+.features__text {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}

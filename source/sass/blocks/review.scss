@@ -1,0 +1,22 @@
+.review__content {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 30px;
+  color: $charcoal;
+  margin-top: 30px;
+}
+
+.review__author-name {
+  @include font-text;
+  display: block;
+  font-style: normal;
+  margin-top: 35px;
+}
+
+.review__author-link {
+  display: block;
+  font-weight: 400;
+  color: $charcoal;
+  margin-top: 10px;
+}

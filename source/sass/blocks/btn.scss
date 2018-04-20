@@ -1,0 +1,44 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  box-sizing: border-box;
+  min-height: 52px;
+  border: 2px solid $charcoal;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $charcoal;
+  background-color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+    background-color: $charcoal;
+  }
+
+  &:active {
+    color: rgba($white, 0.3%);
+    background-color: $charcoal;
+  }
+
+  &--green {
+    border: none;
+    background-color: $downy;
+    color: $white;
+
+    &:hover {
+      color: $downy;
+      background-color: $white;
+      border: 2px solid $downy;
+    }
+
+    &:active {
+      color: rgba($downy, 0.3%);
+      background-color: $white;
+      border: 2px solid $downy;
+    }
+  }
+}

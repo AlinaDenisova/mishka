@@ -3,37 +3,56 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <div class="page-header__container">
-
         <div class="page-header__logo logo">
           <a class="logo__link">
-            <img src="http://placehold.it/150x100" alt="Логотип магазина «Мишка»">
+            <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </a>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="site-list__link" href="catalog.html">
+                <span class="site-list__text">Каталог товаров</span>
+              </a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
+              <a class="site-list__link" href="form.html">
+                <span class="site-list__text">Вязание на заказ</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Новые поступления</span>
+              </a>
+            </li>
+            <li class="site-list__item site-list__item--mobile-hidden">
+              <a class="site-list__link" href="#">
+                <span class="site-list__text">Распродажа</span>
+              </a>
             </li>
           </ul>
 
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a href="#">Поиск по сайту</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Поиск по сайту</span>
+              </a>
             </li>
             <li class="user-list__item">
-              <a href="#">Корзина: пока пуста</a>
+              <a class="user-list__link" href="#">
+                <span class="user-list__text">Корзина: пока пуста</span>
+              </a>
             </li>
           </ul>
         </nav>
@@ -43,52 +62,54 @@
     <main class="page-main">
 
       <section class="promo">
-        <h1 class="promo__title page-title">Милые штуки ручной работы для дома</h1>
+        <h1 class="promo__title">Милые штуки ручной<br> работы для дома</h1>
         <div class="promo__container">
           <ul class="promo__list">
             <li class="promo__item promo__item--interior">
-              <a href="#">Предметы интерьера</a>
+              <a class="promo__item-link" href="#">Предметы<br> интерьера</a>
             </li>
             <li class="promo__item promo__item--toys">
-              <a href="#">Детские игрушки</a>
+              <a class="promo__item-link" href="#">Детские<br> игрушки</a>
             </li>
           </ul>
         </div>
       </section>
 
-      <div class="page-main__container">
-        <section class="good-hit">
+      <section class="good-hit">
+        <div class="good-hit__container">
           <div class="good-hit__text">
             <div class=good-hit__title-wrapper>
-              <h2 class="good-hit__title">Вязанные корзинки</h2>
-              <p class="goot-hit__label">Товар недели</p>
+              <h2 class="good-hit__title">Вязаные корзинки</h2>
+              <p class="good-hit__label">Товар недели</p>
             </div>
             <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
             <table class="good-hit__table properties-table">
               <tr class="properties-table__item">
-                <td>Цвет</td>
+                <td>Цвет:</td>
                 <td>«Тиффани»/серый</td>
               </tr>
               <tr class="properties-table__item">
-                <td>Диаметр</td>
+                <td>Диаметр:</td>
                 <td>25 см</td>
               </tr>
               <tr class="properties-table__item">
-                <td>Высота</td>
+                <td>Высота:</td>
                 <td>15 см</td>
               </tr>
             </table>
           </div>
           <div class="good-hit__img">
-            <img src="http://placehold.it/150x100" alt="Вязанные корзинки">
+            <img src="../img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
           </div>
           <div class="good-hit__buy">
             <span class="good-hit__price">Цена: 990 руб.</span>
             <a href="" class="btn good-hit__btn">Заказать</a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="features">
+      <section class="features">
+        <div class="features__container">
           <h2 class=features__title>Коротко о нас</h2>
           <ul class="features__list">
             <li class="features__item">
@@ -116,13 +137,15 @@
               <p class="features__text">Поставляется в подарочной упаковке</p>
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section class="reviews slider">
+      <section class="reviews slider">
+        <div class="reviews__container">
           <h2 class="reviews__title">Отзывы</h2>
           <ul class="slider__list">
             <li class="slide review">
-              <blockquote class="review__content">>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>>
+              <blockquote class="review__content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
               <cite class="review__author-name">Анастасия Красильникова
                 <a class="review__author-link" href="mailto:@misssssiskras">@misssssiskras</a>
               </cite>
@@ -136,9 +159,9 @@
               <span class="visually-hidden">Следующий отзыв</span>
             </button>
           </div>
-          <a class="btn rewiews__btn" href="#">Написать</a>
-        </section>
-      </div>
+          <a class="btn reviews__btn" href="#">Написать</a>
+        </div>
+      </section>
 
       <section class="contacts">
         <div class="contacts__container">
@@ -169,19 +192,19 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Инстаграм</span>
-                <img src="http://placehold.it/150x100" alt="Инстаграм">
+                <img src="http://placehold.it/50x50" alt="Инстаграм">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Фейсбук</span>
-                <img src="http://placehold.it/150x100" alt="Фейсбук">
+                <img src="http://placehold.it/50x50" alt="Фейсбук">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Твиттер</span>
-                <img src="http://placehold.it/150x100" alt="Твиттер">
+                <img src="http://placehold.it/50x50" alt="Твиттер">
               </a>
             </li>
           </ul>
@@ -198,22 +221,24 @@
 
     <div class="overlay"></div>
     <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="modal__form size-form">
-        <fieldset>
-          <legend class="size-form__title">Выберите размер:</legend>
-          <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
-          <label class="size-form__label" for="s">S</label>
-          <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
-          <label class="size-form__label" for="m">M</label>
-          <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
-          <label class="size-form__label" for="l">L</label>
-          <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
-        </fieldset>
-      </form>
-      <button class="visually-hidden modal__close-btn" type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
+      <div class="modal__container">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <form class="modal__form size-form">
+          <fieldset class="size-form__group">
+            <legend class="size-form__title">Выберите размер:</legend>
+            <input class="visually-hidden size-form__input-radio" id="s" type="radio" name="size" value="s" checked>
+            <label class="size-form__label" for="s">S</label>
+            <input class="visually-hidden size-form__input-radio" id="m" type="radio" name="size" value="m">
+            <label class="size-form__label" for="m">M</label>
+            <input class="visually-hidden size-form__input-radio" id="l" type="radio" name="size" value="l">
+            <label class="size-form__label" for="l">L</label>
+            <button class="btn btn--green size-form__btn" type="submit">Добавить</button>
+          </fieldset>
+        </form>
+        <button class="visually-hidden modal__close-btn" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
 
   </body>
