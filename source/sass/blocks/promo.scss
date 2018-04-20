@@ -4,10 +4,10 @@
   justify-content: space-between;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% 350px;
-  background-color: $white-smoke;
-  min-height: 490px;
+  background-position: top center;
+  background-size: auto 76.43%;
+  background-color: #f9f9f9;
+  min-height: 488px;
   width: 100%;
 }
 
@@ -56,5 +56,4 @@
   align-items: center;
   justify-content: flex-start;
   min-width: 260px;
-  padding-right: 50px;
 }
