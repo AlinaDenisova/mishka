@@ -7,3 +7,12 @@
 .slider__controls {
   margin-top: 35px;
 }
+
+@media (min-width: $tablet-width) {
+  .slider__controls {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    width: 171px
+  }
+}

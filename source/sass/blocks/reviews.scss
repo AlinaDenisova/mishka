@@ -1,10 +1,22 @@
 .reviews {
-  min-width: 260px;
   margin-bottom: 45px;
 }
 
 .reviews__container {
-  @include container-mobile;
+  @include container;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__container {
+    position: relative;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__container {
+    padding-left: 175px;
+  }
 }
 
 .reviews__title {
@@ -14,6 +26,23 @@
   margin-top: 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .reviews__title {
+    padding-top: 78px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
 .reviews__btn {
   margin-top: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__btn {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 171px
+  }
 }

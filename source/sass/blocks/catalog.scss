@@ -4,11 +4,16 @@
 }
 
 .catalog__container {
-  @include container-mobile;
+  @include container;
 }
 
 .catalog__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -1,10 +1,16 @@
 .features {
-  background-color: $white;
   margin-bottom: 30px;
 }
 
 .features__container {
-  @include container-mobile;
+  @include container;
+  box-sizing: border-box;
+}
+
+@media (min-width: $desktop-width) {
+  .features__container {
+    padding-left: 175px;
+  }
 }
 
 .features__title {
@@ -15,13 +21,35 @@
 }
 
 .features__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
   margin-top: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__item {
+    padding-right: 30px;
+    width: 300px;
+
+    &:nth-child(even) {
+    padding-right: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    padding-right: 50px;
+  }
 }
 
 .features__text {

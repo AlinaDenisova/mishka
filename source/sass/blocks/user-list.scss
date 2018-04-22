@@ -1,14 +1,22 @@
-.user-list {
-  @include list-reset;
+@media (min-width: $tablet-width) {
+  .user-list {
+    display: flex;
+  }
 }
 
 .user-list__item {
   border-bottom: 1px solid $whisper;
 }
 
+@media (min-width: $tablet-width) {
+  .user-list__item {
+    border: none;
+  }
+}
+
 .user-list__link {
   @include font-text;
-  @include container-mobile;
+  @include container;
   display: flex;
   align-items: center;
   min-height: 80px;
@@ -23,6 +31,23 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .user-list__link {
+    border: none;
+    width: 153px;
+  }
+}
+
 .user-list__text {
   padding-left: 46px;
+}
+
+@media (min-width: $tablet-width) {
+  .user-list__text {
+    padding-left: 0;
+
+    &--hidden {
+      display: none;
+    }
+  }
 }

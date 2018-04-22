@@ -1,3 +1,22 @@
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 88px;
+    border-bottom: 1px solid $whisper;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__container {
+    @include container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
 .page-header__logo {
   min-height: 80px;
   display: flex;
@@ -9,5 +28,28 @@
 @media (min-width: $tablet-width) {
   .page-header__logo {
     min-height: 88px;
+    border: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+  }
+}
+
+.page-header__delivery {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__delivery {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 110px;
+  }
+}
+

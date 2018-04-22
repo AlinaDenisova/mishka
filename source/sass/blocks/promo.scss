@@ -5,7 +5,7 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: auto 76.43%;
+  background-size: auto 71.9%;
   background-color: #f9f9f9;
   min-height: 488px;
   width: 100%;
@@ -22,14 +22,24 @@
   text-align: center;
 }
 
+@media (min-width: $tablet-width) {
+  .promo__container {
+    @include container;
+  }
+}
+
 .promo__list {
-  margin: 0;
-  padding: 0;
+  @include list-reset;
   margin-bottom: auto;
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__list {
+    flex-direction: row;
+  }
 }
 
 .promo__item {
@@ -45,8 +55,14 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .promo__item {
+    width: 50%;
+  }
+}
+
 .promo__item-link {
-  @include container-mobile;
+  @include container;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
@@ -56,4 +72,18 @@
   align-items: center;
   justify-content: flex-start;
   min-width: 260px;
+  box-sizing: border-box;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__item-link {
+    width: 50%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo__item-link {
+    margin: 0;
+    padding-left: 35px;
+  }
 }

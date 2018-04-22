@@ -10,14 +10,14 @@
 
     <header class="page-header">
       <div class="page-header__container">
-        <div class="page-header__logo logo">
-          <a class="logo__link">
+        <div class="page-header__logo">
+          <a class="page-header__logo-link">
             <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </a>
         </div>
 
         <nav class="main-nav main-nav--closed">
-          <button class="main-nav__toggle" type="button">
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list site-list">
@@ -31,12 +31,12 @@
                 <span class="site-list__text">Вязание на заказ</span>
               </a>
             </li>
-            <li class="site-list__item site-list__item--mobile-hidden">
+            <li class="site-list__item site-list__item--hidden">
               <a class="site-list__link" href="#">
                 <span class="site-list__text">Новые поступления</span>
               </a>
             </li>
-            <li class="site-list__item site-list__item--mobile-hidden">
+            <li class="site-list__item site-list__item--hidden">
               <a class="site-list__link" href="#">
                 <span class="site-list__text">Распродажа</span>
               </a>
@@ -46,7 +46,7 @@
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
               <a class="user-list__link" href="#">
-                <span class="user-list__text">Поиск по сайту</span>
+                <span class="user-list__text user-list__text--hidden">Поиск по сайту</span>
               </a>
             </li>
             <li class="user-list__item">
@@ -56,6 +56,7 @@
             </li>
           </ul>
         </nav>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
       </div>
     </header>
 
@@ -66,10 +67,16 @@
         <div class="promo__container">
           <ul class="promo__list">
             <li class="promo__item promo__item--interior">
-              <a class="promo__item-link" href="#">Предметы<br> интерьера</a>
+              <a class="promo__item-link" href="#">
+                <span class="promo__item-text">Предметы<br> интерьера
+                </span>
+              </a>
             </li>
             <li class="promo__item promo__item--toys">
-              <a class="promo__item-link" href="#">Детские<br> игрушки</a>
+              <a class="promo__item-link" href="#">
+                <span class="ptomo__item-text">Детские<br> игрушки
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -77,11 +84,11 @@
 
       <section class="good-hit">
         <div class="good-hit__container">
+          <div class=good-hit__title-wrapper>
+            <h2 class="good-hit__title">Вязаные корзинки</h2>
+            <p class="good-hit__label">Товар недели</p>
+          </div>
           <div class="good-hit__text">
-            <div class=good-hit__title-wrapper>
-              <h2 class="good-hit__title">Вязаные корзинки</h2>
-              <p class="good-hit__label">Товар недели</p>
-            </div>
             <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
             <table class="good-hit__table properties-table">
               <tr class="properties-table__item">
@@ -97,13 +104,13 @@
                 <td>15 см</td>
               </tr>
             </table>
+            <div class="good-hit__buy">
+              <span class="good-hit__price">Цена: 990 руб.</span>
+              <a href="" class="btn good-hit__btn">Заказать</a>
+            </div>
           </div>
           <div class="good-hit__img">
             <img src="../img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
-          </div>
-          <div class="good-hit__buy">
-            <span class="good-hit__price">Цена: 990 руб.</span>
-            <a href="" class="btn good-hit__btn">Заказать</a>
           </div>
         </div>
       </section>
@@ -114,27 +121,27 @@
           <ul class="features__list">
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - цветок">
-              <p class="features__text">Экологически чистые материалы</p>
+              <p class="features__text">Экологически<br> чистые материалы</p>
             </li>
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - банкнота">
-              <p class="features__text">Скандинавский стиль по российской цене</p>
+              <p class="features__text">Скандинавский стиль<br> по российской цене</p>
             </li>
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - лайк">
-              <p class="features__text">Увеличивает лайки на фотографиях</p>
+              <p class="features__text">Увеличивает лайки<br> на фотографиях</p>
             </li>
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - клубок">
-              <p class="features__text">Связано вручную с любовью и умилением</p>
+              <p class="features__text">Связано вручную с<br> любовью и умилением</p>
             </li>
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - ракета">
-              <p class="features__text">Поддержка отечественного производителя</p>
+              <p class="features__text">Поддержка отечественного<br> производителя</p>
             </li>
             <li class="features__item">
               <img src="http://placehold.it/150x100" alt="Иконка преимуществ - подарок">
-              <p class="features__text">Поставляется в подарочной упаковке</p>
+              <p class="features__text">Поставляется в<br> подарочной упаковке</p>
             </li>
           </ul>
         </div>
@@ -173,19 +180,25 @@
             </div>
             <div class="contacts__info-wrapper">
               <span class="contacts__info">адрес:</span>
-              <span class="contacts__address">г. Санкт-Петербург, ул.Большая Конюшенная, д. 19/8, офис 101</span>
+              <span class="contacts__address">г. Санкт-Петербург,<br> ул.Большая Конюшенная,<br> д. 19/8, офис 101</span>
+            </div>
+            <div class="contacts__btn-wrapper">
+              <a class="btn contacts__btn" href="#">Напишите нам</a>
             </div>
           </div>
-        </div>
-        <div class="contacts__map"></div>
-        <div class="contacts__container">
-          <a class="btn contacts__btn" href="#">Напишите нам</a>
+          <div class="contacts__map"></div>
         </div>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__container">
+
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-link">
+            <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
+          </a>
+        </div>
 
         <div class="page-footer__social social">
           <ul class="social__list">

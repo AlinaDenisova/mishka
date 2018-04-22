@@ -1,10 +1,54 @@
 .good-hit {
-  background-color: $white;
   margin-bottom: 35px;
 }
 
 .good-hit__container {
-  @include container-mobile;
+  @include container;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 126px;
+}
+
+@media (min-width: $tablet-width) {
+  .good-hit__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .good-hit__container {
+    padding-left: 175px;
+    position: relative;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .good-hit__text {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .good-hit__title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .good-hit__title-wrapper {
+    position: absolute;
+    left: -350px;
+    justify-content: flex-end;
+  }
 }
 
 .good-hit__title {
@@ -12,6 +56,13 @@
   padding: 0;
   margin: 0;
   margin-top: 30px;
+}
+
+@media (min-width: $desktop-width) {
+  .good-hit__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .good-hit__label {
@@ -25,6 +76,12 @@
   margin-top: 5px;
 }
 
+@media (min-width: $desktop-width) {
+  .good-hit__label {
+    order: -1;
+  }
+}
+
 .good-hit__descr {
   padding: 0;
   margin: 0;
@@ -35,13 +92,38 @@
   margin-top: 28px;
 }
 
+@media (min-width: $desktop-width) {
+  .good-hit__descr {
+    padding-top: 160px;
+  }
+}
+
 .good-hit__table {
   margin-top: 32px;
+}
+
+@media (min-width: $tablet-width) {
+  .good-hit__img {
+    width: 50%;
+    padding-bottom: 0;
+  }
 }
 
 .good-hit__img img {
   margin-top: 28px;
   width: 100%;
+}
+
+.good-hit__buy {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .good-hit__buy {
+    position: static;
+  }
 }
 
 .good-hit__price {
