@@ -115,9 +115,10 @@
 }
 
 .good-hit__buy {
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 0;
-  width: 100%;
 }
 
 @media (min-width: $tablet-width) {

@@ -8,7 +8,6 @@
   background-size: auto 71.9%;
   background-color: #f9f9f9;
   min-height: 488px;
-  width: 100%;
 }
 
 .promo__title {
@@ -23,8 +22,17 @@
 }
 
 @media (min-width: $tablet-width) {
+  .promo__title {
+    font-size: 43px;
+    line-height: 50px;
+    min-width: 630px;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .promo__container {
     @include container;
+    box-sizing: border-box;
   }
 }
 
@@ -43,8 +51,8 @@
 }
 
 .promo__item {
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
 
   &--interior {
     background-color: $downy;
@@ -71,19 +79,18 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-width: 260px;
-  box-sizing: border-box;
-}
-
-@media (min-width: $tablet-width) {
-  .promo__item-link {
-    width: 50%;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .promo__item-link {
     margin: 0;
-    padding-left: 35px;
+    padding: 0;
+    padding: 0 35px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__item-link {
   }
 }

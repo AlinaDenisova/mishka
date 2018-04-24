@@ -20,15 +20,12 @@
 }
 
 @mixin container {
-  width: 260px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 30px;
+  width: 100%;
 
   @media (min-width: $tablet-width) {
-    width: 668px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1050px;
+    padding: 0 50px;
   }
 }
 

@@ -1,22 +1,23 @@
 @media (min-width: $tablet-width) {
   .site-list {
+    @include list-reset;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    left: -100px;
-    top: 88px;
+    width: 50%;
+    order: 2;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list {
-    width: 445px;
-    top: 0;
-    left: 0;
+    order: 0;
+    width: 42.4%;
+    max-height: 88px;
   }
 }
 
 .site-list__item {
+  @include container;
   border-bottom: 1px solid $whisper;
 
   &--hidden {
@@ -27,24 +28,38 @@
 @media (min-width: $tablet-width) {
   .site-list__item {
     border: none;
+    width: 50%;
+    padding: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list__item {
+    width: 41.4%;
+
     &--hidden {
       display: flex;
+    }
+
+    &:first-child {
+      border-right: 1px solid $whisper;
+      box-sizing: border-box;
+    }
+
+    &:nth-child(even) {
+      padding-left: 35px;
+      box-sizing: content-box;
     }
   }
 }
 
 .site-list__link {
   @include font-text;
-  @include container;
-  box-sizing: border-box;
   display: flex;
+  justify-content: center;
   align-items: center;
   min-height: 80px;
+  max-width: 260px;
 
   &:hover,
   &:focus {
@@ -58,15 +73,26 @@
 
 @media (min-width: $tablet-width) {
   .site-list__link {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
     border: none;
-    width: 153px;
+    min-height: 62px;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
 
 @media (min-width: $desktop-width) {
   .site-list__link {
     border: none;
-    width: 183px;
+    font-size: 17px;
+    min-height: 88px;
+
+    &--hidden {
+      min-height: 62px;
+      font-size: 15px;
+    }
   }
 }
 

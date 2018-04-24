@@ -1,25 +1,62 @@
 @media (min-width: $tablet-width) {
   .user-list {
+    @include list-reset;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    order: 2;
+    width: 42.4%;
+    max-height: 88px;
   }
 }
 
 .user-list__item {
   border-bottom: 1px solid $whisper;
+  max-height: 88px;
 }
 
 @media (min-width: $tablet-width) {
   .user-list__item {
-    border: none;
+    border-bottom: 0;
+    border-left: 1px solid $whisper;
+
+    &--search {
+      width: 21.2%;
+    }
+
+    &--basket {
+      width: 78.7%;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .user-list__item {
+    @include container;
+    border-bottom: 1px solid $whisper;
+
+    &--search {
+      width: 19%;
+    }
+
+    &--basket {
+      width: 59%;
+    }
   }
 }
 
 .user-list__link {
   @include font-text;
-  @include container;
   display: flex;
   align-items: center;
   min-height: 80px;
+  justify-content: center;
 
   &:hover,
   &:focus {
@@ -33,18 +70,17 @@
 
 @media (min-width: $tablet-width) {
   .user-list__link {
+    margin: 0;
+    padding: 0;
     border: none;
-    width: 153px;
+    min-height: 88px;
+    width: 100%;
+    justify-content: flex-end;
   }
-}
-
-.user-list__text {
-  padding-left: 46px;
 }
 
 @media (min-width: $tablet-width) {
   .user-list__text {
-    padding-left: 0;
 
     &--hidden {
       display: none;
