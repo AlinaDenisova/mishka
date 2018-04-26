@@ -1,22 +1,59 @@
-.review__content {
+.review__text {
   margin: 0;
   padding: 0;
   font-size: 15px;
   line-height: 30px;
   color: $charcoal;
-  margin-top: 30px;
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .review__text {
+    font-size: 17px;
+    margin-top: 47px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review__text {
+    margin-top: 50px;
+    max-width: 770px;
+  }
 }
 
 .review__author-name {
   @include font-text;
   display: block;
   font-style: normal;
-  margin-top: 35px;
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .review__author-name {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 60px;
+    padding-right: 205px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review__author-name {
+    font-size: 17px;
+    margin-top: 40px;
+  }
 }
 
 .review__author-link {
   display: block;
   font-weight: 400;
   color: $charcoal;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+
+@media (min-width: $tablet-width) {
+  .review__author-link {
+    line-height: 30px;
+    margin-top: 0;
+  }
 }

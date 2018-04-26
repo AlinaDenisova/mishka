@@ -8,13 +8,13 @@
   </head>
   <body>
 
-    <header class="page-header">
+    <header class="page-header page-header--closed page-header--nojs">
       <div class="page-header__container">
-        <button class="page-header__toggle page-header__toggle--hidden" type="button">
+        <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
-        <div class="page-header__logo">
+        <div class="page-header__logo page-header__logo">
           <a class="page-header__logo-link">
             <img src="../img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </a>
@@ -46,11 +46,19 @@
         <ul class="main-nav__list user-list">
           <li class="user-list__item user-list__item--search">
             <a class="user-list__link" href="#">
+              <svg class="user-list__icon user-list__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
+                <path d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
+              </svg>
               <span class="user-list__text user-list__text--hidden">Поиск по сайту</span>
             </a>
           </li>
           <li class="user-list__item user-list__item--basket">
             <a class="user-list__link" href="#">
+              <svg class="user-list__icon user-list__icon--basket" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
+                <path d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.31
+
+                00 1h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"/>
+              </svg>
               <span class="user-list__text">Корзина: пока пуста</span>
             </a>
           </li>
@@ -85,22 +93,24 @@
         <div class="good-hit__container">
           <div class=good-hit__title-wrapper>
             <h2 class="good-hit__title">Вязаные корзинки</h2>
-            <p class="good-hit__label">Товар недели</p>
+            <div class="good-hit__label-wrapper">
+              <p class="good-hit__label">Товар недели</p>
+            </div>
           </div>
           <div class="good-hit__text">
             <p class="good-hit__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
             <table class="good-hit__table properties-table">
               <tr class="properties-table__item">
-                <td>Цвет:</td>
-                <td>«Тиффани»/серый</td>
+                <td class="properties-table__info">Цвет:</td>
+                <td class="properties-table__value">«Тиффани»/серый</td>
               </tr>
               <tr class="properties-table__item">
-                <td>Диаметр:</td>
-                <td>25 см</td>
+                <td  class="properties-table__info">Диаметр:</td>
+                <td  class="properties-table__value">25 см</td>
               </tr>
               <tr class="properties-table__item">
-                <td>Высота:</td>
-                <td>15 см</td>
+                <td  class="properties-table__info">Высота:</td>
+                <td  class="properties-table__value">15 см</td>
               </tr>
             </table>
             <div class="good-hit__buy">
@@ -116,30 +126,42 @@
 
       <section class="features">
         <div class="features__container">
-          <h2 class=features__title>Коротко о нас</h2>
+          <h2 class=features__title>Коротко о нас:</h2>
           <ul class="features__list">
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - цветок">
+              <div class="features__icon">
+                <img src="../img/icon-feature-flower.svg" width="31.972px" height="37.301px" alt="Иконка преимуществ - цветок">
+              </div>
               <p class="features__text">Экологически<br> чистые материалы</p>
             </li>
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - банкнота">
+              <div class="features__icon">
+                <img src="../img/icon-feature-money.svg" width="46.575px" height="27.332px" alt="Иконка преимуществ - банкнота">
+              </div>
               <p class="features__text">Скандинавский стиль<br> по российской цене</p>
             </li>
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - лайк">
+              <div class="features__icon">
+                <img src="../img/icon-feature-heart.svg" width="33.05px" height="27.857px" alt="Иконка преимуществ - лайк">
+              </div>
               <p class="features__text">Увеличивает лайки<br> на фотографиях</p>
             </li>
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - клубок">
+              <div class="features__icon">
+                <img src="../img/icon-feature-ball.svg" width="34.373px" height="34.373px" alt="Иконка преимуществ - клубок">
+              </div>
               <p class="features__text">Связано вручную с<br> любовью и умилением</p>
             </li>
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - ракета">
+              <div class="features__icon">
+                <img src="../img/icon-feature-rocket.svg" width="54.156px" height="23.183px" alt="Иконка преимуществ - ракета">
+              </div>
               <p class="features__text">Поддержка отечественного<br> производителя</p>
             </li>
             <li class="features__item">
-              <img src="http://placehold.it/150x100" alt="Иконка преимуществ - подарок">
+              <div class="features__icon">
+                <img src="../img/icon-feature-gift.svg" width="32.666px" height="32.486px" alt="Иконка преимуществ - подарок">
+              </div>
               <p class="features__text">Поставляется в<br> подарочной упаковке</p>
             </li>
           </ul>
@@ -148,24 +170,28 @@
 
       <section class="reviews slider">
         <div class="reviews__container">
-          <h2 class="reviews__title">Отзывы</h2>
-          <ul class="slider__list">
-            <li class="slide review">
-              <blockquote class="review__content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-              <cite class="review__author-name">Анастасия Красильникова
-                <a class="review__author-link" href="mailto:@misssssiskras">@misssssiskras</a>
-              </cite>
-            </li>
-          </ul>
-          <div class="slider__controls">
-            <button class="slider__control slider__control--back" type="button">
-              <span class="visually-hidden">Предыдущий отзыв</span>
-            </button>
-            <button class="sider__control slider__control--next" type="button">
-              <span class="visually-hidden">Следующий отзыв</span>
-            </button>
+          <div class="reviews__content-wrapper">
+            <div class="reviews__content">
+              <h2 class="reviews__title">Отзывы</h2>
+              <ul class="slider__list">
+                <li class="slide review">
+                  <blockquote class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
+                  <cite class="review__author-name">Анастасия Красильникова
+                    <a class="review__author-link" href="mailto:@misssssiskras">@misssssiskras</a>
+                  </cite>
+                </li>
+              </ul>
+              <div class="slider__controls">
+                <button class="slider__control slider__control--back" type="button">
+                  <span class="visually-hidden">Предыдущий отзыв</span>
+                </button>
+                <button class="slider__control slider__control--next" type="button">
+                  <span class="visually-hidden">Следующий отзыв</span>
+                </button>
+              </div>
+              <a class="btn reviews__btn" href="#">Написать</a>
+            </div>
           </div>
-          <a class="btn reviews__btn" href="#">Написать</a>
         </div>
       </section>
 
@@ -179,7 +205,7 @@
             </div>
             <div class="contacts__info-wrapper">
               <span class="contacts__info">адрес:</span>
-              <span class="contacts__address">г. Санкт-Петербург,<br> ул.Большая Конюшенная,<br> д. 19/8, офис 101</span>
+              <span class="contacts__address">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
             </div>
             <div class="contacts__btn-wrapper">
               <a class="btn contacts__btn" href="#">Напишите нам</a>
@@ -253,5 +279,6 @@
       </div>
     </section>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

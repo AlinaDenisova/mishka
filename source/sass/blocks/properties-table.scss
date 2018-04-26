@@ -4,9 +4,26 @@
   font-weight: 400;
   color: $charcoal;
   border-collapse: collapse;
+  width: 100%;
 }
 
 .properties-table__item {
   border-bottom: 1px solid $whisper;
   background-color: $white;
+}
+
+.properties-table__info {
+  width: 37.6%;
+  padding: 10px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .properties-table__info {
+    width: 33.3%;
+  }
+}
+
+.properties-table__value {
+  width: 62.4%;
+  padding: 10px 0;
 }
