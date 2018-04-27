@@ -7,13 +7,28 @@
   @include container;
 }
 
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    @include desktop-width;
+    margin-bottom: 55px;
+  }
+}
+
 .catalog__list {
   @include list-reset;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__list {
+    margin-top: 95px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .catalog__list {
     display: flex;
     justify-content: space-between;
+    margin-top: 120px;
   }
 }

@@ -16,6 +16,7 @@
 @media (min-width: $tablet-width) {
   .catalog-card {
     display: flex;
+    margin-bottom: 50px;
   }
 }
 
@@ -23,21 +24,67 @@
   .catalog-card {
     display: flex;
     flex-direction: column;
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
+
+.catalog-card__img {
+  width: 100%;
+  background-color: $white-smoke;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__img {
+    min-height: 334px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-card__img {
+    min-height: 462px;
   }
 }
 
 .catalog-card__img img {
   display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .catalog-card__text {
   padding: 0 28px;
 }
 
+@media (min-width: $tablet-width) {
+  .catalog-card__text {
+    width: 82.5%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-card__text {
+    min-height: 193px;
+  }
+}
+
 .catalog-card__title {
   @include font-text;
   margin: 0;
   padding-top: 30px;
+  max-width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__title {
+    font-size: 20px;
+    padding-top: 25px;
+    margin: 0;
+  }
 }
 
 .catalog-card__link {
@@ -60,9 +107,31 @@
   font-size: 13px;
   line-height: 30px;
   color: $charcoal;
-  padding-top: 15px;
   padding-bottom: 25px;
-  border-bottom: 1px solid $whisper;
+  max-width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__descr {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+  }
+}
+
+.catalog-card__buy {
+  border-top: 1px solid $whisper;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__buy{
+    margin-top: auto;
+  }
 }
 
 .catalog-card__price {
@@ -70,6 +139,22 @@
   font-size: 15px;
   display: block;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 15px;
   padding-bottom: 30px;
+  padding-right: 35px;
+  min-width: 225px;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__price {
+    font-size: 17px;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    max-width: none;
+    width: 100%;
+  }
 }

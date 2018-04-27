@@ -1,5 +1,13 @@
 .social {
   border-bottom: 1px solid $whisper;
+  box-sizing: border-box;
+  min-width: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    min-width: none;
+  }
 }
 
 .social__list {
@@ -9,7 +17,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
   padding-bottom: 30px;
+  padding-top: 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .social-list {
+    padding-top: 0;
+  }
 }
 
 .social__item {

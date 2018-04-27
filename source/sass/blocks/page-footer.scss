@@ -2,7 +2,6 @@
   background-color: $white-smoke;
   display: flex;
   justify-content: center;
-  padding-top: 25px;
 }
 
 .page-footer__container {
@@ -13,6 +12,20 @@
   .page-footer__container {
     display: flex;
     justify-content: space-between;
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__container {
+    @include desktop-width;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__logo {
+    width: 32.3%;
   }
 }
 

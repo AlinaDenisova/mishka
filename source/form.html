@@ -84,7 +84,8 @@
                 <div class="order-form__title">Тип</div>
                 <div class="order-form__input-wrapper">
                   <input class="visually-hidden order-form__input order-form__input--radio" id="interior" type="radio" name="type" value="interior" checked>
-                  <label class="order-form__label order-form__label--left" for="interior">Аксессуар для интерьера</label>
+                  <label class="order-form__label order-form__label--left" for="interior">Аксессуар для интерьера
+                  </label>
                   <input class="visually-hidden order-form__input order-form__input--radio" id="toy" type="radio" name="type" value="toy">
                   <label class="order-form__label order-form__label--left" for="toy">Детская игрушка</label>
                 </div>
@@ -115,19 +116,25 @@
               <div class="order-form__group">
                 <div class="order-form__title">ФИО</div>
                 <div class="order-form__input-wrapper">
-                  <label class="order-form__label" for="name">Имя:</label>
-                  <input class="order-form__field" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
-                  <label class="order-form__label" for="last-name">Фамилия:</label>
-                  <input class="order-form__field" id="last-name" type="text" name="last-name" placeholder="Укажите фамилию*" required>
-                  <label class="order-form__label" for="middle-name">Отчество:</label>
-                  <input class="order-form__field" id="middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете">
+                  <div class="order-form__name-wrapper">
+                    <label class="order-form__label order-form__label--name" for="name">Имя:</label>
+                    <input class="order-form__field order-form__field--name" id="name" type="text" name="name" placeholder="Введите ваше имя*" required>
+                  </div>
+                  <div class="order-form__name-wrapper">
+                    <label class="order-form__label order-form__label--name" for="last-name">Фамилия:</label>
+                    <input class="order-form__field order-form__field--name" id="last-name" type="text" name="last-name" placeholder="Укажите фамилию*" required>
+                  </div>
+                  <div class="order-form__name-wrapper">
+                    <label class="order-form__label order-form__label--name" for="middle-name">Отчество:</label>
+                    <input class="order-form__field order-form__field--name" id="middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете">
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="order-form__group-wrapper">
+            <div class="order-form__group-wrapper order-form__group-wrapper--userdata">
               <div class="order-form__group">
-                <div class="order-form__title">Тел</div>
+                <div class="order-form__title order-form__title--userdata">Тел</div>
                 <div class="order-form__input-wrapper">
                   <label class="order-form__label visually-hidden" for="tel">Телефон:</label>
                   <input class="order-form__field order-form__field--transparent" id="tel" type="tel" name="tel" placeholder="+7 XXX XX XX*" required>
@@ -135,7 +142,7 @@
               </div>
 
               <div class="order-form__group">
-                <div class="order-form__title">E-mail</div>
+                <div class="order-form__title order-form__title--userdata">E-mail</div>
                 <div class="order-form__input-wrapper">
                   <label class="order-form__label visually-hidden" for="email">Электронная почта:</label>
                   <input class="order-form__field order-form__field--transparent" id="email" type="email" name="email" placeholder="Ваш Email*" required>
@@ -143,11 +150,13 @@
               </div>
             </div>
 
-            <div class="order-form__group">
-              <div class="order-form__title">Доп</div>
-              <div class="order-form__input-wrapper">
-                <label class="order-form__label visually-hidden" for="add">Дополнительные пожелания</label>
-                <textarea class="order-form__field order-form__field--textarea" id="add" name="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="order-form__group-wrapper">
+              <div class="order-form__group">
+                <div class="order-form__title">Доп</div>
+                <div class="order-form__input-wrapper">
+                  <label class="order-form__label visually-hidden" for="add">Дополнительные пожелания</label>
+                  <textarea class="order-form__field order-form__field--textarea" id="add" name="add" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
               </div>
             </div>
 
@@ -174,19 +183,19 @@
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Инстаграм</span>
-                <img src="http://placehold.it/50x50" alt="Инстаграм">
+                <img src="../img/icon-insta.svg" width="21.769px" height="21.334px" alt="Инстаграм">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Фейсбук</span>
-                <img src="http://placehold.it/50x50" alt="Фейсбук">
+                <img src="../img/icon-fb.svg" width="14.962px" height="27.718px" alt="Фейсбук">
               </a>
             </li>
             <li class="social__item">
               <a class="social__link" href="#">
                 <span class="visually-hidden">Твиттер</span>
-                <img src="http://placehold.it/50x50" alt="Твиттер">
+                <img src="../img/icon-twitter.svg" width="23.494px" height="20.168px" alt="Твиттер">
               </a>
             </li>
           </ul>
@@ -195,11 +204,12 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
-            <img src="http://placehold.it/150x100" alt="Логотип HTML Academy">
+            <img src="../img/logo-htmlacademy.svg" width="26.943px" height="34.09px" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -54,9 +54,16 @@
   .features__list {
     column-count: 2;
     margin-top: 50px;
-    min-width: 668px;
+    max-width: 668px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__list {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
