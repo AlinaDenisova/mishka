@@ -73,12 +73,6 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .order-form__group-wrapper {
-    @include desktop-width;
-  }
-}
-
 .order-form__group {
   display: flex;
   flex-direction: column;
@@ -88,6 +82,12 @@
   .order-form__group {
     @include container;
     flex-direction: row;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-form__group {
+    @include desktop-width;
   }
 }
 
@@ -309,6 +309,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: 15px;
+  padding-bottom: 14px;
+  line-height: 19px;
   min-height: 50px;
   padding-left: 0;
   border: none;
