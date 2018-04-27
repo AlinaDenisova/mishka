@@ -1,13 +1,41 @@
 .inner-promo {
   background-color: $white-smoke;
-  min-height: 177px;
+  min-height: 176px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .inner-promo {
+    min-height: 210px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-promo {
+    min-height: 235px;
+  }
 }
 
 .inner-promo__title {
   @include page-title;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .inner-promo__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-promo__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 15px;
+  }
 }

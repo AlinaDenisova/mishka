@@ -4,11 +4,31 @@
 }
 
 .catalog__container {
-  @include container-mobile;
+  @include container;
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    @include desktop-width;
+    margin-bottom: 55px;
+  }
 }
 
 .catalog__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__list {
+    margin-top: 95px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+  }
 }

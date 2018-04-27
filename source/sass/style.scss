@@ -1,13 +1,11 @@
+@import "normalize.scss";
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
 @import "blocks/page-header.scss";
-@import "blocks/logo.scss";
-@import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
 @import "blocks/user-list.scss";
-@import "blocks/page-main.scss";
 @import "blocks/promo.scss";
 @import "blocks/good-hit.scss";
 @import "blocks/properties-table.scss";
@@ -15,7 +13,6 @@
 @import "blocks/features.scss";
 @import "blocks/reviews.scss";
 @import "blocks/slider.scss";
-@import "blocks/slide.scss";
 @import "blocks/review.scss";
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";

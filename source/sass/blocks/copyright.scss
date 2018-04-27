@@ -1,12 +1,33 @@
+@media (min-width: $tablet-width) {
+  .copyright {
+    width: 32.9%;
+  }
+}
+
 .copyright__link {
   color: $black;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__link {
+    padding-top: 0;
+  }
 }
 
 .copyright__text {
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
+  padding-right: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright__text {
+    margin-left: auto;
+  }
 }

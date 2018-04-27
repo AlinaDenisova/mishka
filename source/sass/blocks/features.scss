@@ -1,31 +1,109 @@
 .features {
-  background-color: $white;
   margin-bottom: 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .features {
+    margin-top: 115px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    margin-top: 158px;
+  }
+}
+
 .features__container {
-  @include container-mobile;
+  @include container;
+}
+
+@media (min-width: $desktop-width) {
+  .features__container {
+    @include desktop-width;
+    padding-left: 225px;
+  }
 }
 
 .features__title {
   @include section-title;
   margin: 0;
-  padding: 0;
-  margin-top: 30px;
+  padding-top: 33px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .features__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    column-count: 2;
+    margin-top: 50px;
+    max-width: 668px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__list {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .features__item {
   margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .features__item {
+    margin: 0;
+    padding-bottom: 55px;
+    max-width: 295px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    max-width: 310px;
+  }
+}
+
+.features__icon {
+  max-width: 55px;
+  min-height: 55px;
 }
 
 .features__text {
+  display: block;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .features__text {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

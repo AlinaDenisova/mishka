@@ -1,9 +1,10 @@
 .modal {
   background-color: $white;
+  display: none;
 }
 
 .modal__container {
-  @include container-mobile;
+  @include container;
 }
 
 .modal__title {

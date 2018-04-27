@@ -1,5 +1,103 @@
+.page-header {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 88px;
+    border-bottom: 1px solid $whisper;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    @include desktop-width;
+  }
+}
+
+.page-header__toggle {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  display: block;
+  width: 21px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header--closed .page-header__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  box-shadow: 0 6px 0 0 $black,
+    0 12px 0 0 $black;
+}
+
+.page-header--opened .page-header__toggle {
+  top: 30px;
+  right: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 2px;
+
+    background-color: $black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header--closed .page-header__container {
+    max-height: 80px;
+    overflow: hidden;
+  }
+
+  .page-header--opened .page-header__container {
+    overflow: visible;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__container {
+    @include container;
+    max-height: 88px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
 .page-header__logo {
   min-height: 80px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +107,38 @@
 @media (min-width: $tablet-width) {
   .page-header__logo {
     min-height: 88px;
+    max-height: 88px;
+    border: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    order: 1;
+    mergin-left: auto;
+  }
+}
+
+.page-header__delivery {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__delivery {
+    font-size: 15px;
+    line-height: 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    order: 3;
+    width: 50%;
+    min-height: 62px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__delivery {
+    width: 42.4%;
+    margin-left: auto;
   }
 }

@@ -19,9 +19,18 @@
   color: $black;
 }
 
-@mixin container-mobile {
-  width: 260px;
+@mixin container {
+  box-sizing: border-box;
   padding: 0 30px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}
+
+@mixin desktop-width {
+  max-width: 1150px;
   margin: 0 auto;
 }
 
