@@ -40,7 +40,6 @@
 
 @media (min-width: $desktop-width) {
   .user-list__item {
-
     &--search {
       width: 18.8%;
     }
@@ -90,7 +89,7 @@
   }
 
   &:active {
-    fill: rgba($downy, 0.3%)
+    fill: rgba($downy, 0.3%);
   }
 
   &--search {

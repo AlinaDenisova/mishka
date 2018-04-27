@@ -7,7 +7,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .order-form__container{
+  .order-form__container {
     padding: 0;
   }
 }
@@ -52,7 +52,6 @@
 }
 
 .order-form__group-wrapper {
-
   &--userdata {
     margin-bottom: 10px;
   }
@@ -104,10 +103,9 @@
 
 @media (min-width: $tablet-width) {
   .order-form__input-wrapper {
-
     & .order-form__label:last-child {
-    margin-bottom: 25px;
-  }
+      margin-bottom: 25px;
+    }
 
     &--color {
       flex-direction: row;
