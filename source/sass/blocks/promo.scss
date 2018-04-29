@@ -75,6 +75,13 @@
 .promo__item {
   @include container;
   width: 100%;
+  margin-top: 5px;
+
+  &:hover,
+  &:focus {
+    margin-top: 0;
+    padding-bottom: 5px;
+  }
 
   &--interior {
     background-color: $downy;
@@ -108,15 +115,37 @@
 
 @media (min-width: $tablet-width) {
   .promo__item-link {
+    position: relative;
     padding: 0 35px;
     font-size: 20px;
     line-height: 30px;
-    max-width: 334px;
+    margin: 0;
+    max-width: none;
+    padding-top: 10px;
+    justify-content: space-between;
+
+    &:hover .promo__item-icon,
+    &:focus .promo__item-icon {
+      opacity: 0.3;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &:active .promo__item-icon {
+      opacity: 0.15;
+    }
   }
 }
 
-@media (min-width: $desktop-width) {
-  .promo__item-link {
-    margin: 0;
+.promo__item-icon {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__item-icon {
+    display: block;
+    opacity: 0.2;
   }
 }

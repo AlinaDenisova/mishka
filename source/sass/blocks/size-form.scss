@@ -8,18 +8,53 @@
   font-size: 15px;
   line-height: 30px;
   color: $charcoal;
-  margin-top: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .size-form__title {
+    font-size: 17px;
+  }
+}
+
+.size-form__input-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .size-form__label {
+  display: block;
   font-size: 15px;
   line-height: 30px;
   font-weight: 700;
   color: $charcoal;
-  margin-top: 27px;
+  margin-top: 25px;
+  position: relative;
+  box-sizing: border-box;
+  width: 32.3%;
+  height: 52px;
+  background-color: white;
+  border: 2px solid rgba($charcoal, 0.1%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-form__input-radio {
+  &:hover + .size-form__label,
+  &:focus + .size-form__label {
+    border: 2px solid rgba($charcoal, 0.3%);
+  }
+
+  &:checked + .size-form__label {
+    border: 2px solid $downy;
+  }
 }
 
 .size-form__btn {
   margin-top: 30px;
+  margin-bottom: 45px;
   width: 100%;
+  box-sizing: border-box;
 }
