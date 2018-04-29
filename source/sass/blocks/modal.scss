@@ -14,15 +14,7 @@
 
   &--show {
     display: block;
-    animation: bounce 0.6s;
   }
-}
-
-@keyframes bounce {
-  0% {transform: translate(-50%, -200%);}
-  80% {transform: translate(-50%, -10%);}
-  90% {transform: translate(-50%, -30%);}
-  100% {transform: translate(-50%, -50%);}
 }
 
 @media (min-width: $tablet-width) {
