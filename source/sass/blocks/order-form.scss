@@ -118,7 +118,7 @@
 
 @media (min-width: $desktop-width) {
   .order-form__input-wrapper {
-    padding-right: 175px;
+    width: 700px;
 
     &--color {
       padding-right: 0;
@@ -179,6 +179,7 @@
   box-sizing: border-box;
 
   &--left {
+    padding-top: 5px;
     padding-left: 62px;
     min-height: 47px;
     margin-bottom: 13px;
@@ -375,20 +376,20 @@
 .order-form__field-icon {
   position: absolute;
   right: 5px;
-  top: 15%;
+  top: 10px;
   opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
   .order-form__field-icon {
-    right: 5%;
+    right: 25px;
   }
 }
 
 
 @media (min-width: $desktop-width) {
   .order-form__field-icon {
-    right: 175px;
+    right: 0;
   }
 }
 

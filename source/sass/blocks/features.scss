@@ -66,11 +66,14 @@
 
 .features__list {
   @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 @media (min-width: $tablet-width) {
   .features__list {
+    display: block;
     column-count: 2;
     margin-top: 50px;
     max-width: 650px;
@@ -89,7 +92,7 @@
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 260px;
+  min-width: 260px;
 
   &:nth-child(even) {
     margin-top: 27px;

@@ -47,7 +47,7 @@
 
 .production-process__title-wrapper {
   position: absolute;
-  top: 5%;
+  top: 21px;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -63,6 +63,7 @@
   @include font-text;
   margin: 0;
   padding-left: 55px;
+  min-width: 190px;
   width: 100%;
   box-sizing: border-box;
   background-image: url("../img/icon-video.svg");

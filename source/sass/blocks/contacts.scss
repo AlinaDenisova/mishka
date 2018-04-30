@@ -42,13 +42,15 @@
 
 .contacts__text {
   @include container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 @media (min-width: $tablet-width) {
   .contacts__text {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 
@@ -62,6 +64,10 @@
     width: 45.2%;
     margin-top: 80px;
   }
+}
+
+.contacts__title-wrapper {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
@@ -128,12 +134,14 @@
 
 .contacts__info-wrapper {
   margin-top: 25px;
+  max-width: 260px;
   display: flex;
 }
 
 @media (min-width: $tablet-width) {
   .contacts__info-wrapper {
     margin-top: 30px;
+    max-width: none;
     width: 50%;
   }
 }

@@ -108,9 +108,23 @@
   max-width: 260px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+
+  &:hover .promo__item-icon,
+  &:focus .promo__item-icon {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .promo__item-icon {
+    opacity: 0.15;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -122,30 +136,9 @@
     margin: 0;
     max-width: none;
     padding-top: 10px;
-    justify-content: space-between;
-
-    &:hover .promo__item-icon,
-    &:focus .promo__item-icon {
-      opacity: 0.3;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &:active .promo__item-icon {
-      opacity: 0.15;
-    }
   }
 }
 
 .promo__item-icon {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .promo__item-icon {
-    display: block;
     opacity: 0.2;
-  }
 }

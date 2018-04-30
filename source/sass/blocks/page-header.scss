@@ -20,11 +20,12 @@
 .page-header__toggle {
   content: "";
   position: absolute;
+  padding: 0;
   top: 30px;
-  right: 30px;
+  right: 50px;
 
   display: block;
-  width: 21px;
+  max-width: 21px;
   height: 20px;
   background-color: transparent;
   border: none;
@@ -45,7 +46,7 @@
 
 .page-header--opened .page-header__toggle {
   top: 30px;
-  right: 30px;
+  right: 50px;
 
   &::before,
   &::after {
@@ -74,13 +75,26 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .page-header--closed .page-header__container {
-    max-height: 80px;
-    overflow: hidden;
-  }
 
-  .page-header--opened .page-header__container {
-    overflow: visible;
+  .page-header  {
+    &--closed .page-header__container {
+      max-height: 80px;
+      overflow: hidden;
+    }
+
+    &--opened .page-header__container {
+      overflow: visible;
+    }
+
+    &--nojs .page-header__container {
+      position: static;
+      overflow: visible;
+      min-height: 400px;
+    }
+
+    &--nojs .page-header__toggle {
+      display: none;
+    }
   }
 }
 
