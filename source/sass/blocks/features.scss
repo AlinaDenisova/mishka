@@ -90,8 +90,6 @@
 
 .features__item {
   margin-top: 30px;
-  margin-right: auto;
-  margin-left: auto;
   min-width: 260px;
 
   &:nth-child(even) {
@@ -119,10 +117,8 @@
 }
 
 .features__icon-wrapper {
-  max-width: 55px;
-  min-width: 55px;
-  min-height: 55px;
-  max-height: 55px;
+  width: 55px;
+  height: 55px;
   position: relative;
 }
 
