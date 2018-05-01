@@ -57,6 +57,19 @@
     right: 0;
     background-image: url("../img/icon-right-arrow.svg");
   }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &--disabled {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: $tablet-width) {

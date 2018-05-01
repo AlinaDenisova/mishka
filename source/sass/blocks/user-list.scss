@@ -1,6 +1,9 @@
+.user-list {
+  @include list-reset;
+}
+
 @media (min-width: $tablet-width) {
   .user-list {
-    @include list-reset;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -64,8 +67,17 @@
     color: rgba($black, 0.6%);
   }
 
+  &:hover .user-list__icon,
+  &:focus .user-list__icon {
+    fill: $downy;
+  }
+
   &:active {
     color: rgba($black, 0.3%);
+  }
+
+  &:active .user-list__icon {
+    fill: rgba($downy, 0.3%);
   }
 }
 
@@ -82,15 +94,6 @@
 
 .user-list__icon {
   fill: $white-smoke;
-
-  &:hover,
-  &:focus {
-    fill: $downy;
-  }
-
-  &:active {
-    fill: rgba($downy, 0.3%);
-  }
 
   &--search {
     width: 17.6px;

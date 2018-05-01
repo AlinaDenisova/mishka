@@ -89,6 +89,13 @@
   .promo__item {
     width: 50%;
     padding: 0;
+    margin-top: 5px;
+
+    &:hover,
+    &:focus {
+      margin-top: 0;
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -101,22 +108,37 @@
   max-width: 260px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+
+  &:hover .promo__item-icon,
+  &:focus .promo__item-icon {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .promo__item-icon {
+    opacity: 0.15;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .promo__item-link {
+    position: relative;
     padding: 0 35px;
     font-size: 20px;
     line-height: 30px;
-    max-width: 334px;
+    margin: 0;
+    max-width: none;
+    padding-top: 10px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .promo__item-link {
-    margin: 0;
-  }
+.promo__item-icon {
+  opacity: 0.2;
 }

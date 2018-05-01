@@ -6,7 +6,8 @@
 
 @media (min-width: $tablet-width) {
   .social {
-    min-width: none;
+    min-width: 0;
+    border: none;
   }
 }
 
@@ -18,13 +19,13 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 30px;
-  padding-top: 15px;
+  padding-bottom: 25px;
+  padding-top: 20px;
 }
 
 @media (min-width: $desktop-width) {
-  .social-list {
-    padding-top: 0;
+  .social__list {
+    padding-top: 15px;
   }
 }
 
@@ -34,4 +35,15 @@
 
 .social__item:last-child {
   margin-right: 0;
+}
+
+.social__link {
+  &:hover.social__link svg,
+  &:focus.socail__link svg {
+    fill: $downy;
+  }
+
+  &:active.social__link svg {
+    fill: rgba($downy, 0.3%);
+  }
 }

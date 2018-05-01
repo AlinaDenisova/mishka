@@ -94,6 +94,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 
   & .order-form__label:last-child,
   & .order-form__name-wrapper:last-child {
@@ -117,7 +118,7 @@
 
 @media (min-width: $desktop-width) {
   .order-form__input-wrapper {
-    padding-right: 175px;
+    width: 700px;
 
     &--color {
       padding-right: 0;
@@ -155,7 +156,7 @@
   .order-form__title {
     min-width: 167px;
     align-items: flex-start;
-    margin: 20px 0;
+    margin: 18px 0;
 
     &::after {
       display: none;
@@ -175,10 +176,10 @@
   line-height: 18px;
   position: relative;
   cursor: pointer;
-  padding-top: 5px;
   box-sizing: border-box;
 
   &--left {
+    padding-top: 5px;
     padding-left: 62px;
     min-height: 47px;
     margin-bottom: 13px;
@@ -220,12 +221,20 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+
+  &:nth-child(odd) {
+    padding-top: 5px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .order-form__name-wrapper {
     flex-direction: row;
     margin-bottom: 0;
+
+    &:nth-child(odd) {
+      padding-top: 0;
+    }
   }
 }
 
@@ -308,7 +317,8 @@
   box-sizing: border-box;
   padding: 15px;
   padding-bottom: 14px;
-  line-height: 19px;
+  font-size: 17px;
+  line-height: 20px;
   min-height: 50px;
   padding-left: 0;
   border: none;
@@ -318,6 +328,13 @@
   &:focus,
   &:active {
     border-bottom: 2px solid $downy;
+  }
+
+  &:hover + .order-form__field-icon,
+  &:focus + .order-form__field-icon,
+  &:active + .order-form__field-icon {
+    fill: $downy;
+    opacity: 1;
   }
 
   &::-webkit-input-placeholder,
@@ -349,6 +366,30 @@
 @media (min-width: $tablet-width) {
   .order-form__field {
     margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+}
+
+.order-form__field-icon {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__field-icon {
+    right: 25px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .order-form__field-icon {
+    right: 0;
   }
 }
 

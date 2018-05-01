@@ -11,6 +11,19 @@
   align-items: center;
   padding-top: 15px;
   padding-bottom: 30px;
+
+  &:hover.copyright__link svg,
+  &:focus.copyright__link svg {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active.copyright__link svg {
+    fill: #46c1ae;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -24,10 +37,22 @@
   line-height: 18px;
   font-weight: 700;
   padding-right: 30px;
+  padding-top: 10px;
 }
 
 @media (min-width: $tablet-width) {
   .copyright__text {
     margin-left: auto;
+    padding-top: 0;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright__text {
+    padding-top: 20px;
+  }
+}
+
+.copyright__link svg {
+  fill: $downy;
 }

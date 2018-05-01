@@ -3,12 +3,12 @@
   border: 1px solid $whisper;
   margin-top: 30px;
 
-  &:hover .catalog-card__text,
-  &:focus .catalog-card__text {
+  &:hover,
+  &:focus {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
-  &:active .catalog-card__text {
+  &:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
@@ -73,7 +73,7 @@
 .catalog-card__title {
   @include font-text;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 25px;
   max-width: 260px;
   margin-right: auto;
   margin-left: auto;
@@ -107,7 +107,8 @@
   font-size: 13px;
   line-height: 30px;
   color: $charcoal;
-  padding-bottom: 25px;
+  padding-top: 8px;
+  padding-bottom: 17px;
   max-width: 260px;
   margin-right: auto;
   margin-left: auto;
@@ -122,15 +123,39 @@
   }
 }
 
-.catalog-card__buy {
+@media (min-width: $desktop-width) {
+  .catalog-card__descr {
+    padding: 0;
+  }
+}
+
+.catalog-card__buy-wrapper {
   border-top: 1px solid $whisper;
+  margin-top: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__buy-wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.catalog-card__buy {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 260px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog-card__buy {
-    margin-top: auto;
+    margin: 0;
+    max-width: none;
   }
 }
 
@@ -139,22 +164,27 @@
   font-size: 15px;
   display: block;
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 30px;
-  padding-right: 35px;
-  min-width: 225px;
-  box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
+  padding-right: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog-card__price {
     font-size: 17px;
-    margin: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    max-width: none;
-    width: 100%;
+  }
+}
+
+.catalog-card__basket {
+  align-self: flex-end;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    fill: $downy;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: $downy;
+    opacity: 0.3;
   }
 }
