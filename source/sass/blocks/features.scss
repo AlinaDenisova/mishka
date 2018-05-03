@@ -1,21 +1,23 @@
 .features {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .features {
-    margin-top: 115px;
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .features {
-    margin-top: 158px;
+    padding-top: 55px;
   }
 }
 
 .features__container {
   @include container;
+  padding-top: 10px;
 }
 
 @media (min-width: $desktop-width) {
@@ -28,7 +30,6 @@
 .features__title {
   @include section-title;
   margin: 0;
-  padding-top: 33px;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,10 +50,6 @@
 
 @media (min-width: $tablet-width) {
   .features__list-wrapper {
-    min-width: 668px;
-    max-width: 668px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -75,8 +72,9 @@
   .features__list {
     display: block;
     column-count: 2;
+    column-gap: 4%;
     margin-top: 50px;
-    max-width: 650px;
+    width: 97.3%;
   }
 }
 
@@ -90,7 +88,7 @@
 
 .features__item {
   margin-top: 30px;
-  min-width: 260px;
+  width: 100%;
 
   &:nth-child(even) {
     margin-top: 27px;
@@ -101,8 +99,8 @@
   .features__item {
     margin: 0;
     padding-bottom: 55px;
-    min-width: 295px;
     width: 50%;
+    min-width: 295px;
 
     &:nth-child(even) {
       margin-top: 0;

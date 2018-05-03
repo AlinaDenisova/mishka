@@ -2,6 +2,12 @@
   margin-bottom: 55px;
 }
 
+@media (min-width: $tablet-width) {
+  .order-form {
+    margin-bottom: 50px;
+  }
+}
+
 .order-form__container {
   @include container;
 }
@@ -38,7 +44,7 @@
   .order-form__descr {
     font-size: 17px;
     line-height: 30px;
-    padding-top: 65px;
+    padding-top: 35px;
     padding-bottom: 5px;
   }
 }
@@ -46,7 +52,7 @@
 @media (min-width: $desktop-width) {
   .order-form__descr {
     padding-left: 175px;
-    padding-top: 120px;
+    padding-top: 90px;
     max-width: 700px;
   }
 }

@@ -12,7 +12,7 @@
   .page-footer__container {
     display: flex;
     justify-content: space-between;
-    padding-top: 45px;
+    padding-top: 55px;
     padding-bottom: 30px;
   }
 }
@@ -20,22 +20,37 @@
 @media (min-width: $desktop-width) {
   .page-footer__container {
     @include desktop-width;
+    padding-top: 50px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .page-footer__logo {
     width: 32.3%;
-    padding-top: 10px;
   }
 }
 
-.page-footer__logo-link img {
+@media (min-width: $desktop-width) {
+  .page-footer__logo {
+    padding-left: 5px;
+  }
+}
+
+.page-footer__logo-link svg {
   display: none;
 }
 
 @media (min-width: $tablet-width) {
-  .page-footer__logo-link img {
+  .page-footer__logo-link svg {
     display: block;
+
+    &:hover,
+    &:focus {
+      fill: $downy;
+    }
+
+    &:active {
+      fill: rgba($downy, 0.3%);
+    }
   }
 }
