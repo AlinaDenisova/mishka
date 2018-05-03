@@ -26,9 +26,15 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .copyright__link {
+    padding-top: 10px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .copyright__link {
-    padding-top: 0;
+    padding-top: 10px;
   }
 }
 
@@ -44,12 +50,14 @@
   .copyright__text {
     margin-left: auto;
     padding-top: 0;
+    padding-bottom: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .copyright__text {
-    padding-top: 20px;
+    padding-right: 25px;
+    padding-bottom: 10px;
   }
 }
 
