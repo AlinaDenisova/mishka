@@ -7,7 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var minify = require("gulp-csso");
-var jsmin = require('gulp-jsmin');
+var jsmin = require("gulp-jsmin");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
@@ -91,10 +91,11 @@ gulp.task("style", function() {
 });
 
 gulp.task("jsmin", function () {
-    gulp.src('source/js/*.js')
-      .pipe(jsmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('build/js'));
+  gulp.src("source/js/*.js")
+    .pipe(jsmin())
+    .pipe(rename({suffix: ".min"}))
+    .pipe(gulp.dest("build/js"))
+    .pipe(server.stream());
 });
 
 
@@ -108,6 +109,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/js/**/*.js", ["jsmin"]);
   gulp.watch("source/*.html", ["html"]);
 });
 
