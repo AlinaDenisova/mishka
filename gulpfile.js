@@ -68,12 +68,12 @@ gulp.task("copy", function () {
   ], {
     base: "source"
   })
-   .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
 });
 
 
 gulp.task("clean", function () {
- return del("build");
+  return del("build");
 });
 
 gulp.task("style", function() {
@@ -91,10 +91,10 @@ gulp.task("style", function() {
 });
 
 gulp.task("jsmin", function () {
-    gulp.src('source/js/*.js')
-      .pipe(jsmin())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('build/js'));
+  gulp.src('source/js/*.js')
+    .pipe(jsmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/js'));
 });
 
 
