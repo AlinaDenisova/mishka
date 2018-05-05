@@ -29,12 +29,12 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-   .pipe(webp({quality: 90}))
-   .pipe(gulp.dest("source/img"));
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
 });
 
 gulp.task("html", function () {
-   return gulp.src("source/*.html")
+  return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
     ]))
@@ -68,12 +68,12 @@ gulp.task("copy", function () {
   ], {
     base: "source"
   })
-   .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
 });
 
 
 gulp.task("clean", function () {
- return del("build");
+  return del("build");
 });
 
 gulp.task("style", function() {
