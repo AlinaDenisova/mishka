@@ -1,7 +1,6 @@
 .promo {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -26,6 +25,7 @@
     &::after {
       content: "";
       position: absolute;
+      display: block;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -57,7 +57,7 @@
   margin: 0;
   padding: 0;
   padding-top: 70px;
-  padding-bottom: 40px;
+  padding-bottom: 120px;
   text-align: center;
 }
 
@@ -67,6 +67,7 @@
     line-height: 50px;
     min-width: 70%;
     padding-top: 155px;
+    padding-bottom: 365px;
   }
 }
 
@@ -75,7 +76,7 @@
     font-size: 53px;
     line-height: 57px;
     min-width: 70%;
-    padding-top: 155px;
+    padding-bottom: 355px;
   }
 }
 
@@ -109,9 +110,19 @@
 .promo__item {
   @include container;
   width: 100%;
+  padding-bottom: 5px;
+  min-height: 103px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 
   &--interior {
     background-color: $downy;
+    padding-bottom: 12px;
+  }
+
+  &--interior .promo__item-icon{
+    padding-top: 10px;
   }
 
   &--toys {
@@ -122,15 +133,29 @@
 @media (min-width: $tablet-width) {
   .promo__item {
     width: 50%;
-    padding: 0;
     margin-top: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 20px;
+    padding: 0 35px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+
+    &--interior {
+      padding-bottom: 30px;
+    }
+
+    &--interior .promo__item-icon{
+      padding-top: 5px;
+    }
 
     &:hover,
     &:focus {
       margin-top: 0;
-      padding-bottom: 25px;
+      padding-bottom: 40px;
+    }
+
+    &--interior:hover,
+    &--interior:focus {
+      margin-top: 0;
+      padding-bottom: 40px;
     }
   }
 }
@@ -140,7 +165,6 @@
   line-height: 24px;
   font-weight: 700;
   color: $white;
-  min-height: 103px;
   max-width: 260px;
   display: flex;
   align-items: center;
@@ -148,6 +172,7 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
+  padding: 0;
 
   &:hover .promo__item-icon,
   &:focus .promo__item-icon {
@@ -166,15 +191,19 @@
 @media (min-width: $tablet-width) {
   .promo__item-link {
     position: relative;
-    padding: 0 35px;
     font-size: 20px;
     line-height: 30px;
     margin: 0;
     max-width: none;
-    padding-top: 10px;
   }
 }
 
 .promo__item-icon {
   opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__item-icon {
+    padding-top: 5px;
+  }
 }

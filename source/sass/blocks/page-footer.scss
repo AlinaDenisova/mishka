@@ -4,6 +4,12 @@
   justify-content: center;
 }
 
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: block;
+  }
+}
+
 .page-footer__container {
   @include container;
 }

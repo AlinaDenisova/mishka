@@ -3,7 +3,6 @@
   min-height: 176px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -14,6 +13,7 @@
     &::after {
       content: "";
       position: absolute;
+      display: block;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -38,13 +38,14 @@
 .inner-promo__title {
   @include page-title;
   margin: 0;
-  padding: 0;
+  padding-top: 70px;
 }
 
 @media (min-width: $tablet-width) {
   .inner-promo__title {
     font-size: 43px;
     line-height: 50px;
+    padding-top: 95px;
   }
 }
 
@@ -52,6 +53,5 @@
   .inner-promo__title {
     font-size: 53px;
     line-height: 57px;
-    padding-bottom: 10px;
   }
 }

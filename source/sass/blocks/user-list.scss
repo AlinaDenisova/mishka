@@ -31,8 +31,14 @@
     border-left: 1px solid $whisper;
     padding: 0;
 
+
     &--search {
       width: 24%;
+    }
+
+    &--search .user-list__link {
+      padding-top: 40;
+      padding-bottom: 30;
     }
 
     &--basket {
@@ -55,12 +61,13 @@
 
 .user-list__link {
   @include font-text;
-  display: flex;
-  align-items: center;
+  box-sizing: border-box;
+  padding: 30px 0;
   min-height: 80px;
-  margin-left: auto;
-  margin-right: auto;
   max-width: 260px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 
   &:hover,
   &:focus {
@@ -84,10 +91,11 @@
 @media (min-width: $tablet-width) {
   .user-list__link {
     margin-right: 0;
-    padding: 0;
+    padding: 35px 0;
     border: none;
     min-height: 88px;
     width: 100%;
+    display: flex;
     justify-content: flex-end;
   }
 }
@@ -109,8 +117,8 @@
 @media (min-width: $tablet-width) {
   .user-list__icon {
     &--search {
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 37.4%;
+      margin-right: 37.4%;
     }
   }
 }
@@ -121,7 +129,7 @@
 
 @media (min-width: $tablet-width) {
   .user-list__text {
-    padding-left: 30px;
+    padding-left: 35px;
 
     &--hidden {
       display: none;

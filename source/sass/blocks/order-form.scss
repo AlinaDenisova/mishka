@@ -114,10 +114,14 @@
       margin-bottom: 25px;
     }
 
+    & .order-form__label--color:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
     &--color {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
   }
 }
@@ -129,6 +133,14 @@
     &--color {
       padding-right: 0;
       width: 740px;
+    }
+
+    & .order-form__label--color:nth-of-type(2n) {
+      margin-right: 6.6%;
+    }
+
+    & .order-form__label--color:nth-of-type(3n) {
+      margin-right: 0;
     }
   }
 }
@@ -210,7 +222,8 @@
     }
 
     &--color {
-      width: 239px;
+      width: 47.7%;
+      margin-right: 4.6%;
     }
   }
 }
@@ -218,7 +231,8 @@
 @media (min-width: $desktop-width) {
   .order-form__label {
     &--color {
-      width: 214px;
+      width: 28.9%;
+      margin-right: 6.6%;
     }
   }
 }
