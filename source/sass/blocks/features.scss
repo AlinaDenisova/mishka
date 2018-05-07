@@ -77,7 +77,7 @@
   .features__list {
     margin-left: 0;
     margin-right: 0;
-    max-width: 685px;
+    max-width: 670px;
   }
 }
 
@@ -92,6 +92,7 @@
 
 @media (min-width: $tablet-width) {
   .features__item {
+    display: inline-block;
     margin: 0;
     padding-bottom: 55px;
     width: 50%;

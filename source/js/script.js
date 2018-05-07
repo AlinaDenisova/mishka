@@ -15,7 +15,7 @@ toggle.addEventListener("click", function(evt) {
 });
 
 var link = document.querySelector(".good-hit__btn");
-var catalogLink = document.querySelector(".catalog-card__basket");
+var catalogLink = document.querySelectorAll(".catalog-card__basket");
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".overlay");
 
@@ -28,11 +28,13 @@ if (link) {
 }
 
 if (catalogLink) {
-  catalogLink.addEventListener ("click", function (evt) {
-    evt.preventDefault();
-    modal.classList.add("modal--show");
-    overlay.classList.add("overlay--show");
-  });
+  for (var i = 0; i < catalogLink.length; i++) {
+    catalogLink[i].addEventListener ("click", function (evt) {
+      evt.preventDefault();
+      modal.classList.add("modal--show");
+      overlay.classList.add("overlay--show");
+    });
+  }
 }
 
 if (overlay) {
