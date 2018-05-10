@@ -91,12 +91,19 @@
 @media (min-width: $tablet-width) {
   .user-list__link {
     margin-right: 0;
-    padding: 35px 0;
+    padding: 0;
+    padding-top: 35px;
     border: none;
     min-height: 88px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list__link {
+    padding-top: 33px;
   }
 }
 
