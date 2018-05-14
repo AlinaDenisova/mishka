@@ -24,13 +24,13 @@ gulp.task("images", function () {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
@@ -42,17 +42,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src([
-      "source/img/icon-cart.svg",
-      "source/img/icon-mail.svg",
-      "source/img/icon-phone.svg",
-      "source/img/icon-fb.svg",
-      "source/img/icon-insta.svg",
-      "source/img/icon-search.svg",
-      "source/img/icon-twitter.svg",
-      "source/img/logo-htmlacademy.svg",
-      "source/img/logo-footer.svg"
-  ])
+  return gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -98,7 +88,6 @@ gulp.task("jsmin", function () {
     .pipe(server.stream());
 });
 
-
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -119,6 +108,7 @@ gulp.task("build", function (done) {
   "copy",
   "style",
   "jsmin",
+  "images",
   "sprite",
   "html",
   done
