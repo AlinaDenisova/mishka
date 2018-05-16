@@ -71,11 +71,11 @@
   }
 
   &::before {
-    top: -8px;
+    top: -6px;
   }
 
   &::after {
-    top: 8px;
+    top: 6px;
   }
 }
 
@@ -149,6 +149,7 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo img {
+    display: block;
     width: 113px;
     height: auto;
   }

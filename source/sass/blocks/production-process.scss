@@ -2,9 +2,15 @@
   margin-bottom: 60px;
 }
 
+@media (min-width: $tablet-width) {
+  .production-process {
+    margin-bottom: 62px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .production-process {
-    margin-bottom: 100px;
+    margin-bottom: 102px;
   }
 }
 
@@ -128,9 +134,18 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .production-process__img {
+    position: relative;
+    min-width: 680px;
+    max-width: 680px;
+  }
+}
+
 .production-process__video img {
   margin-right: auto;
   margin-left: auto;
+  display: block;
 }
 
 .production-process__video-button {
@@ -188,5 +203,7 @@
 @media (min-width: $desktop-width) {
   .production-process__btn {
     margin-top: 45px;
+    margin-bottom: 45px;
+    padding: 12px 10px 15px;
   }
 }

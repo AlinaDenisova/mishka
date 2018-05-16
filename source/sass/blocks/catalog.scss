@@ -6,13 +6,13 @@
 @media (min-width: $tablet-width) {
   .catalog {
     padding-top: 35px;
-    margin-bottom: 55px;
+    margin-bottom: 52px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog {
-    padding-top: 90px;
+    padding-top: 92px;
     margin-bottom: 60px;
   }
 }
@@ -35,6 +35,7 @@
 @media (min-width: $desktop-width) {
   .catalog__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }

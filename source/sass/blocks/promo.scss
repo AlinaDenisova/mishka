@@ -18,7 +18,7 @@
 @media (min-width: $tablet-width) {
   .promo {
     position: relative;
-    min-height: 756px;
+    min-height: 746px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: auto;
 
@@ -29,10 +29,10 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 23px;
+      height: 21px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: auto 24px;
+      background-size: auto 23px;
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -42,10 +42,11 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .promo {
     &::after {
-      background-size: auto 34px;
+      height: 32px;
+      background-size: auto 37px;
     }
   }
 }
@@ -109,6 +110,7 @@
 
 .promo__item {
   @include container;
+  padding-right: 35px;
   width: 100%;
   min-height: 103px;
   padding-top: 20px;
@@ -118,6 +120,7 @@
   &--interior {
     background-color: $downy;
     padding-bottom: 12px;
+    padding-top: 15px;
   }
 
   &--interior .promo__item-icon {
@@ -125,6 +128,7 @@
   }
 
   &--toys {
+    padding-right: 25px;
     background-color: #56c3b2;
   }
 }
@@ -143,7 +147,7 @@
     }
 
     &--interior .promo__item-icon {
-      padding-top: 5px;
+      padding-top: 10px;
     }
 
     &:hover,
@@ -156,6 +160,34 @@
     &--interior:focus {
       margin-top: 0;
       padding-bottom: 41px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo__item {
+    padding-bottom: 46px;
+
+    &--interior {
+      padding-bottom: 41px;
+    }
+
+    &--interior .promo__item-icon {
+      padding-top: 5px;
+    }
+
+    &--toys .promo__item-icon {
+      padding-top: 0;
+    }
+
+    &:hover,
+    &:focus {
+      padding-bottom: 51px;
+    }
+
+    &--interior:hover,
+    &--interior:focus {
+      padding-bottom: 46px;
     }
   }
 }
@@ -176,15 +208,11 @@
 
   &:hover .promo__item-icon,
   &:focus .promo__item-icon {
-    opacity: 0.3;
+    opacity: 0.7;
   }
 
   &:active {
     opacity: 0.3;
-  }
-
-  &:active .promo__item-icon {
-    opacity: 0.15;
   }
 }
 
@@ -199,11 +227,11 @@
 }
 
 .promo__item-icon {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 @media (min-width: $tablet-width) {
   .promo__item-icon {
-    padding-top: 5px;
+    padding-top: 10px;
   }
 }

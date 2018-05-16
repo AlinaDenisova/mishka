@@ -16,7 +16,7 @@
 @media (min-width: $tablet-width) {
   .catalog-card {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
@@ -25,11 +25,17 @@
     display: flex;
     flex-direction: column;
     width: 30%;
+    margin-right: 4.7%;
     margin-bottom: 0;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 
 .catalog-card__img {
+  display: block;
   width: 100%;
   background-color: $white-smoke;
 }
@@ -125,7 +131,7 @@
     font-size: 15px;
     margin: 0;
     padding: 0;
-    padding-top: 8px;
+    padding-top: 5px;
   }
 }
 
@@ -138,7 +144,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog-card__buy-wrapper {
-    padding-top: 25px;
+    padding-top: 20px;
     padding-bottom: 25px;
   }
 }
@@ -177,6 +183,14 @@
 @media (min-width: $tablet-width) {
   .catalog-card__price {
     font-size: 17px;
+    padding-left: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-card__price {
+    font-size: 17px;
+    padding-left: 0;
   }
 }
 
@@ -193,5 +207,12 @@
   &:active {
     fill: $downy;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-card__basket {
+    padding-bottom: 5px;
+    pading-right: 2px;
   }
 }

@@ -1,6 +1,6 @@
 .good-hit {
   position: relative;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-bottom: 55px;
 
   &::after {
@@ -22,14 +22,17 @@
     padding-bottom: 75px;
 
     &::after {
-      background-size: auto 17px;
+      width: 100%;
+      height: 27px;
+      background-size: 768px 15px;
+      background-position: -22px 0;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .good-hit {
-    padding-top: 60px;
+    padding-top: 58px;
     padding-bottom: 0;
 
     &::after {
@@ -65,11 +68,12 @@
       position: absolute;
       left: 50px;
       bottom: 0;
-      width: 91%;
-      height: 23px;
       background-image: url("../img/bg-zigzag-line.svg");
+      width: 91%;
+      height: 26px;
+      background-size: 1050px 20px;
+      background-position: -25px 0;
       background-repeat: repeat-x;
-      background-size: auto 23px;
     }
   }
 }
@@ -161,8 +165,7 @@
 @media (min-width: $desktop-width) {
   .good-hit__label {
     padding: 0;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 45px;
     margin-top: 15px;
   }
 }
@@ -188,7 +191,7 @@
 @media (min-width: $desktop-width) {
   .good-hit__descr {
     margin: 0;
-    padding-top: 161px;
+    padding-top: 158px;
   }
 }
 
@@ -209,6 +212,7 @@
 }
 
 .good-hit__img {
+  display: block;
   margin-top: 28px;
 }
 
@@ -263,19 +267,20 @@
 }
 
 .good-hit__btn {
-  margin-top: 26px;
+  margin-top: 25px;
   min-width: 260px;
   box-sizing: border-box;
+  margin-bottom: 5px;
 }
 
 @media (min-width: $tablet-width) {
   .good-hit__btn {
-    margin-top: 35px;
+    margin-top: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .good-hit__btn {
-    margin-top: 30px;
+    margin-top: 32px;
   }
 }

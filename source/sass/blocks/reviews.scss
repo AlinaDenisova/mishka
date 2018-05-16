@@ -8,7 +8,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 23px;
+    height: 28px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 6px;
@@ -20,7 +20,10 @@
     padding-bottom: 90px;
 
     &::after {
-      background-size: auto 17px;
+      width: 100%;
+      height: 23px;
+      background-size: 768px 15px;
+      background-position: -22px 0;
     }
   }
 }
@@ -44,15 +47,17 @@
 @media (min-width: $tablet-width) {
   .reviews__container {
     position: relative;
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-image: url("../img/review@1x.jpg"),
+      linear-gradient(to right, #f2f2f2 350px, $white 350px, $white);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 0 0;
     padding-bottom: 50px;
-    background-size: auto;
+    background-size: auto, auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
-      background-size: 350px auto;
+      background-image: url("../img/review@2x.jpg"),
+        linear-gradient(to right, #f2f2f2 350px, $white 350px, $white);
+      background-size: 350px auto, auto;
     }
   }
 }
@@ -68,11 +73,12 @@
       position: absolute;
       left: 50px;
       bottom: 0;
-      width: 91%;
-      height: 23px;
       background-image: url("../img/bg-zigzag-line.svg");
+      width: 91%;
+      height: 26px;
+      background-size: 1050px 20px;
+      background-position: -25px 0;
       background-repeat: repeat-x;
-      background-size: auto 23px;
     }
   }
 }
@@ -87,14 +93,16 @@
   .reviews__content-wrapper {
     padding-left: 175px;
     padding-bottom: 90px;
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: auto;
+    background-image: url("../img/review@1x.jpg"),
+      linear-gradient(to right, #f2f2f2 350px, $white 350px, $white);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 0 0;
+    background-size: auto, auto;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
-      background-size: 350px auto;
+      background-image: url("../img/review@2x.jpg"),
+        linear-gradient(to right, #f2f2f2 350px, $white 350px, $white);
+      background-size: 350px auto, auto;
     }
   }
 }

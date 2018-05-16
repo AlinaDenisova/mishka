@@ -68,6 +68,7 @@
   @include font-text;
   display: block;
   padding: 30px 0;
+  padding-left: 46px;
   box-sizing: border-box;
   margin-right: auto;
   margin-left: auto;
@@ -89,6 +90,7 @@
     margin: 0;
     padding-top: 20px;
     padding-bottom: 35px;
+    padding-left: 0;
     font-size: 15px;
     border: none;
     min-height: 62px;
@@ -112,15 +114,5 @@
       padding-top: 20px;
       padding-bottom: 0;
     }
-  }
-}
-
-.site-list__text {
-  padding-left: 46px;
-}
-
-@media (min-width: $tablet-width) {
-  .site-list__text {
-    padding-left: 0;
   }
 }

@@ -8,7 +8,7 @@
 @media (min-width: $tablet-width) {
   .inner-promo {
     position: relative;
-    min-height: 240px;
+    min-height: 238px;
 
     &::after {
       content: "";
@@ -20,7 +20,7 @@
       height: 23px;
       background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
-      background-size: auto 24px;
+      background-size: auto 23px;
     }
   }
 }
@@ -30,6 +30,7 @@
     min-height: 260px;
 
     &::after {
+      height: 21px;
       background-size: auto 34px;
     }
   }

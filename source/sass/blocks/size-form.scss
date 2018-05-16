@@ -40,15 +40,13 @@
   align-items: center;
 }
 
-.size-form__input-radio {
-  &:hover + .size-form__label,
-  &:focus + .size-form__label {
-    border: 2px solid rgba($charcoal, 0.3%);
-  }
+.size-form__input-radio:hover + .size-form__label,
+.size-form__input-radio:focus + .size-form__label {
+  border: 2px solid rgba($charcoal, 0.3%);
+}
 
-  &:checked + .size-form__label {
-    border: 2px solid $downy;
-  }
+.size-form__input-radio:checked + .size-form__label {
+  border: 2px solid $downy;
 }
 
 .size-form__btn {
