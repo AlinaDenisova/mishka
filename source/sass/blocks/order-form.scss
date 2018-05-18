@@ -447,10 +447,8 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .order-form__btn {
-    width: 230px;
-    margin-top: 0;
-    padding: 15px 10px 13px 15px;
+    padding: 15px 15px 13px 10px;
   }
 }
