@@ -32,7 +32,7 @@
 
 @media (min-width: $desktop-width) {
   .good-hit {
-    padding-top: 58px;
+    padding-top: 54px;
     padding-bottom: 0;
 
     &::after {
@@ -70,7 +70,7 @@
       bottom: 0;
       background-image: url("../img/bg-zigzag-line.svg");
       width: 91%;
-      height: 26px;
+      height: 29px;
       background-size: 1050px 20px;
       background-position: -25px 0;
       background-repeat: repeat-x;

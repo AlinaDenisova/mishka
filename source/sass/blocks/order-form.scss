@@ -1,60 +1,18 @@
 .order-form {
-  margin-bottom: 57px;
-}
-
-@media (min-width: $tablet-width) {
-  .order-form {
-    margin-bottom: 45px;
+  ::-webkit-input-placeholder {
+    color: rgba($charcoal, 0.3);
   }
-}
 
-.order-form__container {
-  @include container;
-}
-
-@media (min-width: $tablet-width) {
-  .order-form__container {
-    padding: 0;
+  ::-moz-placeholder {
+    color: rgba($charcoal, 0.3);
   }
-}
 
-@media (min-width: $tablet-width) {
-  .order-form__descr-wrapper {
-    @include container;
+  :-moz-placeholder {
+    color: rgba($charcoal, 0.3);
   }
-}
 
-@media (min-width: $desktop-width) {
-  .order-form__descr-wrapper {
-    @include desktop-width;
-  }
-}
-
-.order-form__descr {
-  display: block;
-  padding: 0;
-  margin: 0;
-  font-size: 13px;
-  line-height: 24px;
-  color: $charcoal;
-  margin-top: 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .order-form__descr {
-    font-size: 17px;
-    line-height: 30px;
-    padding-top: 35px;
-    padding-bottom: 5px;
-    margin-top: 25px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .order-form__descr {
-    padding-left: 175px;
-    padding-top: 92px;
-    max-width: 700px;
+  :-ms-input-placeholder {
+    color: rgba($charcoal, 0.3);
   }
 }
 
@@ -89,11 +47,6 @@
 @media (min-width: $desktop-width) {
   .order-form__group {
     @include desktop-width;
-
-    &:nth-last-child(1) .order-form__title--userdata {
-      padding-left: 5px;
-      padding-right: 0;
-    }
   }
 }
 
@@ -177,6 +130,11 @@
 
     &--userdata {
       padding-right: 20px;
+    }
+
+    &--email {
+      padding-left: 5px;
+      padding-right: 0;
     }
   }
 }
@@ -354,7 +312,6 @@
   }
 }
 
-
 .order-form__field {
   font-family: inherit;
   width: 100%;
@@ -379,13 +336,6 @@
   &:active + .order-form__field-icon {
     fill: $downy;
     opacity: 1;
-  }
-
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-moz-placeholder,
-  &:-ms-input-placeholder {
-    color: rgba($charcoal, 0.3%);
   }
 
   &--transparent {
@@ -423,9 +373,10 @@
   right: 0;
   top: 10px;
   opacity: 0.2;
+  right: 5px;
 
   &--phone {
-    right: 5px;
+    right: 10px;
   }
 }
 
@@ -494,5 +445,13 @@
     width: 230px;
     margin-top: 0;
     padding: 17px 10px 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__btn {
+    width: 230px;
+    margin-top: 0;
+    padding: 16px 10px 13px;
   }
 }

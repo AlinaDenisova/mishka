@@ -74,14 +74,14 @@
         <h1 class="inner-promo__title">Вязание на заказ</h1>
       </div>
 
-      <section class="order-form">
-        <div class="order-form__container">
+      <section class="form-block">
+        <div class="form-block__container">
           <h2 class="visually-hidden">Форма заказа товаров</h2>
-          <div class="order-form__descr-wrapper">
-            <p class="order-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+          <div class="form-block__descr-wrapper">
+            <p class="form-block__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           </div>
 
-          <form method="post" action="https://echo.htmlacademy.ru">
+          <form class="order-form" method="post" action="https://echo.htmlacademy.ru">
             <div class="order-form__group-wrapper">
               <div class="order-form__group">
                 <div class="order-form__title">Тип</div>
@@ -148,7 +148,7 @@
               </div>
 
               <div class="order-form__group">
-                <div class="order-form__title order-form__title--userdata">E-mail</div>
+                <div class="order-form__title order-form__title--userdata order-form__title--email">E-mail</div>
                 <div class="order-form__input-wrapper">
                   <label class="order-form__label visually-hidden" for="email">Электронная почта:</label>
                   <input class="order-form__field order-form__field--transparent" id="email" type="email" name="email" placeholder="Ваш Email*" required>
