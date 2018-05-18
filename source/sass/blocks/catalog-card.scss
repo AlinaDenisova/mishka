@@ -152,6 +152,7 @@
 @media (min-width: $desktop-width) {
   .catalog-card__buy-wrapper {
     padding-bottom: 22px;
+    padding-top: 24px;
     padding-right: 5px;
   }
 }
@@ -214,5 +215,11 @@
   .catalog-card__basket {
     padding-bottom: 5px;
     padding-right: 2px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-card__basket {
+    padding-right: 0;
   }
 }
